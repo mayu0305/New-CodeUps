@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.voice-status{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.voice-status__demographic{
+    display: block;
+    color: $font-color;
+    font-size: rem(12);
+}
+

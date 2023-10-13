@@ -3,7 +3,7 @@
 .campaign-card{
     display: flex;
     flex-direction: column-reverse;
-    box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 rem(4) rem(4) 0px rgba(0, 0, 0, 0.4);
 }
 
 .campaign-card__content{
@@ -12,22 +12,6 @@
     @include mq("md") {
         padding: rem(24) rem(16) rem(40);
     }
-}
-
-.campaign-card__content-tag{
-    display: inline-block;
-    border: rem(1) solid $green;
-    color: $green;
-    font-size: rem(12);
-    line-height: rem(30);
-    height: rem(30);
-    padding: 0 rem(12);
-
-    @include mq("md") {
-        line-height: rem(34);
-        height: rem(34);
-        padding: 0 rem(16);
-        }
 }
 
 .campaign-card__content-title{
@@ -52,7 +36,7 @@
 }
 
 .campaign-card__content-price{
-    margin-top: rem(8 );
+    margin-top: rem(8);
 }
 
 .campaign-card__img{

@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.card-tag{
+    display: inline-block;
+    border: rem(1) solid $green;
+    color: $green;
+    font-size: rem(12);
+    line-height: rem(30);
+    height: rem(30);
+    padding: 0 rem(12);
+
+    @include mq("md") {
+        line-height: rem(34);
+        height: rem(34);
+        padding: 0 rem(16);
+        }
+}
