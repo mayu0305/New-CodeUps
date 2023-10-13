@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.voice-card{
+    box-shadow: 0 rem(4) rem(4) 0px rgba(0, 0, 0, 0.4);
+    padding: rem(15) rem(16) rem(24);
+
+    @include mq("md") {
+        padding: rem(48) rem(24) rem(24);
+    }
+}
+
+.voice-card__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.voice-card__header-text{
+    flex-basis: 47.6%;
+}
+
+.voice-card__header-title{
+    border-bottom: rem(1) solid $green;
+    color: $font-color;
+    font-size: rem(16);
+    font-weight: $medium;
+    padding-bottom: rem(4);
+
+    @include mq("md") {
+        margin-top: rem(8);
+    }
+}
+
+.voice-card__header-img{
+    flex-basis: 52.4%;
+    padding-left: rem(13);
+
+    @include mq("md") {
+        flex-basis: rem(180);
+        margin-left: rem(16);
+        padding-left: 0;
+    }
+}
+
+.voice-card__text{
+    margin-top: rem(15);
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
