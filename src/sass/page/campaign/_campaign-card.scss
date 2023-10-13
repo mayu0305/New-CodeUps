@@ -3,7 +3,7 @@
 .campaign-card{
     display: flex;
     flex-direction: column-reverse;
-    box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
+    box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.4);
 }
 
 .campaign-card__content{
@@ -53,4 +53,12 @@
 
 .campaign-card__content-price{
     margin-top: rem(8 );
+}
+
+.campaign-card__img{
+
+    img{
+        aspect-ratio: 300/200;
+        object-fit: cover;
+    }
 }
