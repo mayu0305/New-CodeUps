@@ -40,6 +40,11 @@
         margin-left: rem(16);
         padding-left: 0;
     }
+
+    img{
+        aspect-ratio: 18/14;
+        object-fit: cover;
+    }
 }
 
 .voice-card__text{
