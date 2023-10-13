@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.section-title{
+    color: $green;
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: 1.5;
+    text-align: center;
+    position: relative;
+
+    span{
+        display: block;
+        color: $font-color;
+        font-family: $second-font-family;
+        font-size: rem(40);
+        line-height: 1;
+        margin-bottom: rem(8);
+
+        &::first-letter{
+            color: $green;
+        }
+    }
+}
+
+.section-title--white{
+    color: $white;
+
+    span{
+        color: $white;
+
+        &::first-letter{
+            color: $light-green;
+        }
+    }
+}
