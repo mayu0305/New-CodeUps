@@ -3,6 +3,7 @@
 .campaign-card{
     display: flex;
     flex-direction: column-reverse;
+    box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
 }
 
 .campaign-card__content{
