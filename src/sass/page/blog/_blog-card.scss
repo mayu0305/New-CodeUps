@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.blog-card{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: rem(16) rem(16) rem(24);
+    box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.4);
+}
+
+.blog-card__content-date{
+    display: inline-block;
+    color: $font-color;
+    font-size: rem(12);
+    font-family: $second-font-family;
+    padding-top: rem(24);
+}
+
+.blog-card__content-title{
+    color: $font-color;
+    font-size: rem(16);
+    font-weight: $medium;
+}
+
+.blog-card__content-text{
+    border-top: rem(1) solid $green;
+    margin-top: rem(4);
+    padding-top: rem(16);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+.campaign-card__img{
+
+    img{
+        aspect-ratio: 300/200;
+        object-fit: cover;
+    }
+}
