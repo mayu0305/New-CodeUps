@@ -10,12 +10,16 @@
 }
 
 .top-voice__illust01{
+    width: rem(301);
+    height: rem(138);
     position: absolute;
     top: rem(20);
     left: calc(50% - min(48.5vw, 39rem));
 }
 
 .top-voice__illust02{
+    width: rem(71);
+    height: rem(162);
     position: absolute;
     top: rem(-37);
     right: 0;
