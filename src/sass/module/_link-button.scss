@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .link-button{
+    display: inline-block;
 
     a{
         display: flex;
