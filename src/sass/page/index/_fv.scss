@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.fv{
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+
+    &::before{
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($black, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+}
+
+.fv__img-wrap{
+    height: 100%;
+    overflow: hidden;
+}
+
+
+@keyframes zoomUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+.fv{
+    .swiper-slide-active img,
+    .swiper-slide-duplicate-active img,
+    .swiper-slide-prev img{
+        animation: zoomUp 10s linear 0s 1 normal both;
+    }
+}
+
+.fv__img{
+
+    img{
+        display: block;
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+.fv__text{
+    color: $white;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.fv__text-main{
+    display: block;
+    font-family: $num-font-family;
+    font-size: rem(40);
+    letter-spacing: 0.54em;
+    line-height: 1.25;
+    margin-right: -0.54em;
+
+    @include mq("md") {
+        font-size: rem(80);
+    }
+}
+
+.fv__text-sub{
+    display: block;
+    font-family: $second-font-family;
+    font-size: rem(20);
+}
