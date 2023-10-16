@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.aboutAs-intro{
+    padding-top: rem(26);
+    position: relative;
+
+    @include mq("md") {
+        padding-top: rem(80);
+    }
+}
+
+
+.aboutAs-intro__img-main{
+    width: 81.16%;
+    margin-left: auto;
+
+    @include mq("md") {
+        width: 81.5%;
+    }
+}
+
+.aboutAs-intro__img-sub{
+    width: 37.1%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.aboutAs-intro__text{
+
+    @include mq("md") {
+        display: flex;
+        width: rem(840);
+        position: absolute;
+        top: rem(200);
+        left: rem(200);
+    }
+}
+
+.aboutAs-intro__text-title{
+    color: $green;
+    font-family: $second-font-family;
+    font-weight: $regular;
+    font-size: rem(40);
+    line-height: 1;
+    margin-top: rem(40);
+
+    @include mq("md") {
+        flex-basis: rem(400);
+        color: $white;
+        font-size: rem(80);
+        line-height: 1.25;
+        margin-top: 0;
+    }
+}
+
+.aboutAs-intro__text-wrap{
+
+    @include mq("md") {
+        flex-basis: rem(400);
+        margin-left: rem(40);
+    }
+}
+
+.aboutAs-intro__text-desc{
+    color: $font-color;
+    margin-top: rem(16);
+
+    @include mq("md") {
+        color: $white;
+        margin-top: 0;
+    }
+}
+
+.aboutAs-intro__text-link{
+    text-align: center;
+    margin-top: rem(50);
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
