@@ -25,7 +25,10 @@
 
 .top-info__content-text{
     flex-basis: 50%;
-    padding-left: rem(48);
+
+    @include mq("md") {
+        padding-left: rem(48);
+    }
 }
 
 .top-info__content-img{

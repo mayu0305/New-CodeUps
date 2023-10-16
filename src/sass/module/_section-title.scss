@@ -12,9 +12,13 @@
         display: block;
         color: $font-color;
         font-family: $second-font-family;
-        font-size: rem(40);
+        font-size: rem(32);
         line-height: 1;
         margin-bottom: rem(8);
+
+        @include mq("md") {
+            font-size: rem(40);
+        }
 
         &::first-letter{
             color: $green;
@@ -22,14 +26,14 @@
     }
 }
 
-.section-title--white{
-    color: $white;
+// .section-title--white{
+//     color: $white;
 
-    span{
-        color: $white;
+//     span{
+//         color: $white;
 
-        &::first-letter{
-            color: $light-green;
-        }
-    }
-}
+//         &::first-letter{
+//             color: $light-green;
+//         }
+//     }
+// }
