@@ -1,9 +1,12 @@
 @use "global" as *;
 
 .voice-status{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+
+    @include mq("md") {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
 
 .voice-status__demographic{

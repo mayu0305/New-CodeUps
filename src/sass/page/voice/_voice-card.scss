@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .voice-card{
-    box-shadow: 0 rem(4) rem(4) 0px rgba(0, 0, 0, 0.4);
+    box-shadow: rem(2) rem(2) rem(10) 0px rgba(0, 0, 0, 0.25);
     padding: rem(15) rem(16) rem(24);
 
     @include mq("md") {
-        padding: rem(48) rem(24) rem(24);
+        padding: rem(24);
     }
 }
 
@@ -17,6 +17,7 @@
 
 .voice-card__header-text{
     flex-basis: 47.6%;
+    flex-grow: 1;
 }
 
 .voice-card__header-title{
@@ -24,9 +25,11 @@
     color: $font-color;
     font-size: rem(16);
     font-weight: $medium;
+    margin-top: rem(4);
     padding-bottom: rem(4);
 
     @include mq("md") {
+        font-size: rem(24);
         margin-top: rem(8);
     }
 }
