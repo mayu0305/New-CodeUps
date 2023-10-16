@@ -1,35 +1,39 @@
 @use "global" as *;
 
 .link-button{
-    display: flex;
-    align-items: center;
-    background-color: $green;
-    color: $white;
-    font-family: $second-font-family;
-    padding-left: rem(40);
-    margin-bottom: rem(4);
-    height: rem(54);
-    width: rem(202);
-    position: relative;
 
-    &::before{
-        content: "";
-        display: inline-block;
-        border: rem(1) solid $green;
+    a{
+        display: flex;
+        align-items: center;
+        background-color: $green;
+        color: $white;
+        font-family: $second-font-family;
+        padding-left: rem(40);
+        margin-bottom: rem(4);
         height: rem(54);
         width: rem(202);
-        position: absolute;
-        bottom: rem(-4);
-        right: rem(-4);
+        position: relative;
+
+        &::before{
+            content: "";
+            display: inline-block;
+            border: rem(1) solid $green;
+            height: rem(54);
+            width: rem(202);
+            position: absolute;
+            bottom: rem(-4);
+            right: rem(-4);
+        }
+
+        &::after{
+            content: "";
+            display: inline-block;
+            background-image: url(../images/common/button-arrow.svg);
+            background-repeat: no-repeat;
+            margin-left: rem(8);
+            height: rem(8);
+            width: rem(42);
+        }
     }
 
-    &::after{
-        content: "";
-        display: inline-block;
-        background-image: url(../images/common/button-arrow.svg);
-        background-repeat: no-repeat;
-        margin-left: rem(8);
-        height: rem(8);
-        width: rem(42);
-    }
 }
