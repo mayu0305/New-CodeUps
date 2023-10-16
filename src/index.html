@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -194,34 +195,143 @@
 
   <main class="main">
     <div class="fv">
-      <div class="kv__img-wrap js-swiper kv-swiper">
+      <div class="fv__img-wrap js-fv-swiper">
         <ul class="swiper-wrapper">
-            <li class="swiper-slide kv__img">
+            <li class="swiper-slide fv__img">
               <picture>
-                <source media="(min-width: 768px)" srcset="images/page/index/kv-slider01--pc.jpg">
-                <img src="images/page/index/kv-slider01--sp.jpg" alt="トップイメージ画像" decoding="async">
+                <source media="(min-width: 768px)" srcset="assets\images\index\fv01_pc.webp">
+                <img src="assets\images\index\fv01_sp.webp" alt="トップイメージ画像" decoding="async">
               </picture>
             </li>
-            <li class="swiper-slide kv__img">
+            <li class="swiper-slide fv__img">
               <picture>
-                <source media="(min-width: 768px)" srcset="images/page/index/kv-slider02--pc.jpg">
-                <img src="images/page/index/kv-slider02--sp.jpg" alt="トップイメージ画像" decoding="async">
+                <source media="(min-width: 768px)" srcset="assets\images\index\fv02_pc.webp">
+                <img src="assets\images\index\fv02_sp.webp" alt="トップイメージ画像" decoding="async">
               </picture>
             </li>
-            <li class="swiper-slide kv__img">
+            <li class="swiper-slide fv__img">
               <picture>
-                <source media="(min-width: 768px)" srcset="images/page/index/kv-slider03--pc.jpg">
-                <img src="images/page/index/kv-slider03--sp.jpg" alt="トップイメージ画像" decoding="async">
+                <source media="(min-width: 768px)" srcset="assets\images\index\fv03_pc.webp">
+                <img src="assets\images\index\fv03_sp.webp" alt="トップイメージ画像" decoding="async">
+              </picture>
+            </li>
+            <li class="swiper-slide fv__img">
+              <picture>
+                <source media="(min-width: 768px)" srcset="assets\images\index\fv04_pc.webp">
+                <img src="assets\images\index\fv04_sp.webp" alt="トップイメージ画像" decoding="async">
               </picture>
             </li>
         </ul>
-      </div><!-- /kv_img-wrap swiper kv-swiper -->
-    </div>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
-      <br><br><br><br><br><br><br><br>
+      </div><!-- fv__img-wrap js-fv-swiper -->
+      <div class="fv__text">
+        <span class="fv__text-main">DIVING</span>
+        <span class="fv__text-sub">into the ocean</span>
+      </div><!-- fv__text -->
+    </div><!-- fv -->
 
-    </div>
+    <section class="top-campaign">
+      <div class="inner">
+        <h2 class="section-title">
+          <span aria-hidden="true">Campaign</span>
+          キャンペーン
+        </h2>
+        <div class="top-campaign__contents">
+          <div class="top-campaign__slider js-campaign-swiper">
+            <ul class="swiper-wrapper top-campaign__items">
+                <li class="swiper-slide  top-campaign__item">
+                  <div class="campaign-card">
+                    <div class="campaign-card__content">
+                      <span class="card-tag">
+                        ライセンス講習
+                      </span>
+                      <h3 class="campaign-card__content-title">
+                        ライセンス取得
+                      </h3>
+                      <span class="campaign-card__content-desc">
+                        全部コミコミ(お一人様)
+                      </span>
+                      <div class="campaign-card__content-price campaign-price">
+                        <span class="campaign-price__regular">¥56,000</span>
+                        <span class="campaign-price__sale">¥46,000</span>
+                      </div>
+                    </div><!-- campaign-card__content-->
+                    <figure class="campaign-card__img">
+                      <img src="assets\images\campaign\campaign01.webp" alt="海中を泳ぐ沢山の熱帯魚の写真" decoding="async" loading="lazy">
+                    </figure>
+                  </div><!-- campaign-card-->
+                </li>
+                <li class="swiper-slide  top-campaign__item">
+                  <div class="campaign-card">
+                    <div class="campaign-card__content">
+                      <span class="card-tag">
+                        ライセンス講習
+                      </span>
+                      <h3 class="campaign-card__content-title">
+                        ライセンス取得
+                      </h3>
+                      <span class="campaign-card__content-desc">
+                        全部コミコミ(お一人様)
+                      </span>
+                      <div class="campaign-card__content-price campaign-price">
+                        <span class="campaign-price__regular">¥56,000</span>
+                        <span class="campaign-price__sale">¥46,000</span>
+                      </div>
+                    </div><!-- campaign-card__content-->
+                    <figure class="campaign-card__img">
+                      <img src="assets\images\campaign\campaign01.webp" alt="海中を泳ぐ沢山の熱帯魚の写真" decoding="async" loading="lazy">
+                    </figure>
+                  </div><!-- campaign-card-->
+                </li>
+                <li class="swiper-slide  top-campaign__item">
+                  <div class="campaign-card">
+                    <div class="campaign-card__content">
+                      <span class="card-tag">
+                        ライセンス講習
+                      </span>
+                      <h3 class="campaign-card__content-title">
+                        ライセンス取得
+                      </h3>
+                      <span class="campaign-card__content-desc">
+                        全部コミコミ(お一人様)
+                      </span>
+                      <div class="campaign-card__content-price campaign-price">
+                        <span class="campaign-price__regular">¥56,000</span>
+                        <span class="campaign-price__sale">¥46,000</span>
+                      </div>
+                    </div><!-- campaign-card__content-->
+                    <figure class="campaign-card__img">
+                      <img src="assets\images\campaign\campaign01.webp" alt="海中を泳ぐ沢山の熱帯魚の写真" decoding="async" loading="lazy">
+                    </figure>
+                  </div><!-- campaign-card-->
+                </li>
+                <li class="swiper-slide  top-campaign__item">
+                  <div class="campaign-card">
+                    <div class="campaign-card__content">
+                      <span class="card-tag">
+                        ライセンス講習
+                      </span>
+                      <h3 class="campaign-card__content-title">
+                        ライセンス取得
+                      </h3>
+                      <span class="campaign-card__content-desc">
+                        全部コミコミ(お一人様)
+                      </span>
+                      <div class="campaign-card__content-price campaign-price">
+                        <span class="campaign-price__regular">¥56,000</span>
+                        <span class="campaign-price__sale">¥46,000</span>
+                      </div>
+                    </div><!-- campaign-card__content-->
+                    <figure class="campaign-card__img">
+                      <img src="assets\images\campaign\campaign01.webp" alt="海中を泳ぐ沢山の熱帯魚の写真" decoding="async" loading="lazy">
+                    </figure>
+                  </div><!-- campaign-card-->
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- top-campaign -->
+
   </main>
   <footer class="footer">
     <div class="inner">
