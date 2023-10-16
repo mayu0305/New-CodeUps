@@ -1,0 +1,96 @@
+@use "global" as *;
+
+.header{
+    background-color: rgba($font-color, 0.68);
+    height: rem(80);
+    transition: .3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    &.open{
+        background-color: $green;
+        transition: .3s;
+    }
+
+    @include mq(md) {
+        height: rem(90);
+    }
+}
+
+.header__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: rem(15);
+    position: relative;
+
+    @include mq(md) {
+        padding-left: rem(40);
+    }
+}
+
+.header__logo{
+    height: rem(38);
+    width: rem(102);
+
+    @include mq(md) {
+        height: rem(50);
+    width: rem(133);
+    }
+
+    img{
+        height: 100%;
+        width: auto;
+    }
+}
+
+.header__nav{
+    height: 100%;
+    padding-right: rem(20);
+}
+
+.header__nav-items{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header__nav-item{
+
+    a{
+        display: block;
+        color: $white;
+        font-size: rem(10);
+        height: 100%;
+        line-height: 1;
+        padding: 0 rem(20);
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+
+        span{
+            display: block;
+            font-family: $second-font-family;
+            font-size: rem(18);
+            line-height: 1.5;
+        }
+    }
+}
+
+.heaer__nav--sp{
+    display: none;
+    background-color: $green;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: rem(92);
+    z-index: -1;
+}

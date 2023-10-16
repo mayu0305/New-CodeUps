@@ -26,15 +26,200 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header>
+  <header class="header js-header">
+    <div class="header__content">
+      <h1 class="header__logo">
+        <a href="/">
+          <img src="assets\images\common\logo--white.svg" alt="CodeUps" decoding="async">
+        </a>
+      </h1>
+      <nav class="header__nav  u-desktop">
+        <ul class="header__nav-items">
+          <li class="header__nav-item">
+            <a href="">キャンペーン
+              <span>Campaign</span>
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="">私たちについて
+              <span>About us</span>
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="">ダイビング情報
+              <span>Information</span>
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="">ブログ
+              <span>Blog</span>
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="">お客様の声
+              <span>Voice</span>
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="">料金一覧
+              <span>Price</span>
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="">よくある質問
+              <span>FAQ</span>
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="">お問合せ
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="heaer__nav--sp js-drawer-menu" id="global-nav">
+        <div class="inner">
+          <nav class="nav-menu">
+            <div class="nav-menu__half">
+              <div class="nav-menu__quarter">
+                <ul class="nav-menu__items">
+                  <li class="nav-menu__item">
+                    <a href="">キャンペーン</a>
+                  </li>
+                  <li class="nav-menu__item sub-menu">
+                    <ul class="nav-menu__items">
+                      <li class="sub-menu__item">
+                        <a href="">ライセンス取得</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="">貸切体験ダイビング</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="">ナイトダイビング</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="">私たちについて</a>
+                  </li>
+                </ul>
+              </div><!-- nav-menu__quarter -->
+              <div class="nav-menu__quarter">
+                <ul class="nav-menu__items">
+                  <li class="nav-menu__item">
+                    <a href="">ダイビング情報</a>
+                  </li>
+                  <li class="nav-menu__item sub-menu">
+                    <ul class="nav-menu__items">
+                      <li class="sub-menu__item">
+                        <a href="">ライセンス講習</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="">体験ダイビング</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="">ファンダイビング</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="">ブログ</a>
+                  </li>
+                </ul>
+              </div><!-- nav-menu__quarter -->
+            </div><!-- nav-menu__half -->
+            <div class="nav-menu__half">
+              <div class="nav-menu__quarter">
+                <ul class="nav-menu__items">
+                  <li class="nav-menu__item">
+                    <a href="">お客様の声</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="">料金一覧</a>
+                  </li>
+                  <li class="nav-menu__item sub-menu">
+                    <ul class="nav-menu__items">
+                      <li class="sub-menu__item">
+                        <a href="">ライセンス講習</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="">体験ダイビング</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a href="">ファンダイビング</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div><!-- nav-menu__quarter -->
+              <div class="nav-menu__quarter">
+                <ul class="nav-menu__items">
+                  <li class="nav-menu__item">
+                    <a href="">よくある質問</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="">プライバシー<span class="text-block">ポリシー</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="">利用規約</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="">サイトマップ</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="">お問い合わせ</a>
+                  </li>
+                </ul>
+              </div><!-- nav-menu__quarter -->
+            </div><!-- nav-menu__half -->
+          </nav>
+        </div>
+      </div>
+
+      <button type="button" id="MenuButton" class="js-drawer-open drower-button" aria-controls="global-nav" aria-expanded="false">
+        <span class="drower-button__line">
+          <span class="visually-hidden">
+            メニューを開閉するボタン
+          </span>
+        </span>
+      </button>
+    </div>
 
   </header>
-  <main>
+
+  <main class="main">
+    <div class="fv">
+      <div class="kv__img-wrap js-swiper kv-swiper">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide kv__img">
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/page/index/kv-slider01--pc.jpg">
+                <img src="images/page/index/kv-slider01--sp.jpg" alt="トップイメージ画像" decoding="async">
+              </picture>
+            </li>
+            <li class="swiper-slide kv__img">
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/page/index/kv-slider02--pc.jpg">
+                <img src="images/page/index/kv-slider02--sp.jpg" alt="トップイメージ画像" decoding="async">
+              </picture>
+            </li>
+            <li class="swiper-slide kv__img">
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/page/index/kv-slider03--pc.jpg">
+                <img src="images/page/index/kv-slider03--sp.jpg" alt="トップイメージ画像" decoding="async">
+              </picture>
+            </li>
+        </ul>
+      </div><!-- /kv_img-wrap swiper kv-swiper -->
+    </div>
     <div class="inner">
       <p class="test">変更のテスト</p>
+      <br><br><br><br><br><br><br><br>
 
     </div>
   </main>
@@ -42,14 +227,14 @@
     <div class="inner">
       <div class="footer__upper">
         <div class="footer__upper-logo">
-          <img src="assets\images\common\logo--white.svg" alt="CodeUps">
+          <img src="assets\images\common\logo--white.svg" alt="CodeUps" decoding="async" loading="lazy">
         </div>
         <div class="footer__upper-sns">
           <a href="" target="_blank">
-            <img src="assets\images\common\icon-facebook.svg" alt="CodeUps">
+            <img src="assets\images\common\icon-facebook.svg" alt="CodeUps" decoding="async" loading="lazy">
           </a>
           <a href="" target="_blank">
-            <img src="assets\images\common\icon-Instagram.svg" alt="CodeUps">
+            <img src="assets\images\common\icon-Instagram.svg" alt="CodeUps" decoding="async" loading="lazy">
           </a>
         </div>
       </div>
