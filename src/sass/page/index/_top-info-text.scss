@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.top-info-text{
+    margin-top: rem(24);
+
+        @include mq("md") {
+            margin-top: rem(60);
+        }
+}
+
+.top-info-text__title{
+    border-bottom: rem(1) solid $green;
+    color: $font-color;
+    font-size: rem(20);
+    font-weight: $bold;
+    line-height: 1.2;
+    padding-bottom: rem(4);
+
+    @include mq("md") {
+        font-size: rem(24);
+        padding-bottom: rem(8);
+    }
+}
+
+.top-info-text__desc{
+    color: $font-color;
+    margin-top: rem(8);
+}
+
+.top-info-text__link{
+    text-align: center;
+    margin-top: rem(40);
+}

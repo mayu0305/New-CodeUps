@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.top-info{
+    background-color: $light-green;
+    margin-top: rem(80);
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+
+    @include mq("md") {
+        margin-top: rem(160);
+        padding-top: rem(100);
+    }
+}
+
+.top-info__content{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: rem(24);
+
+    @include mq("md") {
+        flex-direction: row-reverse;
+        margin-top: rem(40);
+    }
+}
+
+.top-info__content-text{
+    flex-basis: 50%;
+    padding-left: rem(48);
+}
+
+.top-info__content-img{
+
+    @include mq("md") {
+        flex-basis: 50%;
+    }
+
+    img{
+        aspect-ratio: 540/356;
+        object-fit: cover;
+    }
+}
