@@ -14,6 +14,11 @@
     width: 81.16%;
     margin-left: auto;
 
+    img{
+        aspect-ratio: 88/58;
+        object-fit: cover;
+    }
+
     @include mq("md") {
         width: 81.5%;
     }
@@ -24,6 +29,11 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    img{
+        aspect-ratio: 40/60;
+        object-fit: cover;
+    }
 }
 
 .aboutAs-intro__text{
