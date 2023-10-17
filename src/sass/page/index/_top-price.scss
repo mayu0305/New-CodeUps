@@ -44,6 +44,15 @@
     @include mq("md") {
         flex-basis: calc((100% - rem(96)) / 2);
     }
+
+    img{
+        aspect-ratio: 345/227;
+        object-fit: cover;
+
+        @include mq("md") {
+            aspect-ratio: 492/746;
+        }
+    }
 }
 
 .top-price__link{
