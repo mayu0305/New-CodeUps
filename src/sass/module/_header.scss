@@ -60,9 +60,13 @@
 }
 
 .header__nav-item{
+    height: 100%;
 
     a{
-        display: block;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
         color: $white;
         font-size: rem(10);
         height: 100%;
@@ -70,9 +74,23 @@
         padding: 0 rem(20);
         position: relative;
 
-        display: flex;
-        align-items: center;
-        flex-direction: column-reverse;
+        &::before{
+            content: "";
+            display: block;
+            background-color: $white;
+            height: rem(1);
+            width: 0;
+            position: absolute;
+            bottom: rem(18);
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.3s;
+        }
+
+        &:hover::before{
+            width: calc(100% - rem(40));
+            transition: 0.3s;
+        }
 
         span{
             display: block;
