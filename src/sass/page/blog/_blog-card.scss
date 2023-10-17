@@ -10,14 +10,12 @@
 
 .blog-card__content-date{
     display: inline-block;
-    color: $font-color;
     font-size: rem(12);
     font-family: $second-font-family;
     padding-top: rem(24);
 }
 
 .blog-card__content-title{
-    color: $font-color;
     font-size: rem(16);
     font-weight: $medium;
 }

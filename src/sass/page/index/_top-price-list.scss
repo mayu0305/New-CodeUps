@@ -2,7 +2,6 @@
 
 .top-price-list__title{
     border-bottom: rem(1) solid $green;
-    color: $font-color;
     font-size: rem(16);
     font-weight: $bold ;
     padding-bottom: rem(4);
@@ -15,7 +14,6 @@
 .top-price-list__item{
     display: flex;
     justify-content: space-between;
-    color: $font-color;
     font-size: rem(14);
     margin-top: rem(8);
 
