@@ -15,7 +15,6 @@
 }
 
 .campaign-card__content-title{
-    color: $font-color;
     font-size: rem(16);
     font-weight: $medium;
     padding-top: rem(4);
@@ -24,7 +23,6 @@
 .campaign-card__content-desc{
     display: block;
     border-top: rem(1) solid $green;
-    color: $font-color;
     font-size: rem(14);
     text-align: center;
     margin-top: rem(8);
