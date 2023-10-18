@@ -49,10 +49,10 @@ const firstSwiper = new Swiper(".js-fv-swiper", {
 const secondSwiper = new Swiper(".js-campaign-swiper", {
     slidesPerView: 'auto',
     grabCursor: true,
-
     loop: true,
     speed: 2000,
-    spaceBetween: 24,
+    // spaceBetween: 24,
+    centeredSlides: false,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -64,7 +64,7 @@ const secondSwiper = new Swiper(".js-campaign-swiper", {
     breakpoints: {
         // スライドの表示枚数：768px以上の場合
         768: {
-            spaceBetween: 40,
+            // spaceBetween: 40,
         }
     }
 });
