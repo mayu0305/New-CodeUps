@@ -2,11 +2,12 @@
 
 .section-contact{
     margin-top: rem(80);
-    margin-bottom: rem(100);
+    margin-bottom: calc(rem(100) - rem(64)); //to-top高さ差し引き
     position: relative;
 
     @include mq("md") {
         margin-top: rem(140);
+        margin-bottom: calc(rem(160) - rem(100)); //to-top高さ差し引き
     }
 }
 
