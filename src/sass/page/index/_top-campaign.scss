@@ -26,11 +26,12 @@
 }
 
 .top-campaign__item{
+    margin-right: rem(24);
     padding-bottom: rem(40);
     max-width: rem(280);
 
     @include mq("md") {
-        margin-right: rem(40) !important; //swiper設定の変更
+        margin-right: rem(40);
         padding-bottom: rem(80);
         max-width: rem(333);
     }
