@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.to-top {
+    width: rem(48);
+    height: rem(48);
+    margin: 0 rem(15) rem(16) auto;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: rem(20);
+    z-index: 1;
+
+    @include mq("md") {
+        width: rem(80);
+        height: rem(80);
+        margin: 0 rem(20) rem(20) auto;
+    }
+
+    img{
+        filter: drop-shadow(0 rem(4) rem(4) rgba(0, 0, 0, 0.25));
+    }
+}
