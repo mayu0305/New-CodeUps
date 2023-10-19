@@ -117,3 +117,9 @@ a {
   color: inherit;
   transition: opacity 0.3s;
 }
+
+/*フォーカス*/
+
+:focus-visible{
+  outline-color: #408F95;
+}
