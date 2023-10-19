@@ -9,15 +9,19 @@
 }
 
 .contact-link__title{
+    padding-bottom: 0 !important; //section-titleに負けるので強制
 
     span{
         font-size: rem(80) !important; //section-titleに負けるので強制
+        line-height: 1 !important; //section-titleに負けるので強制
+        margin-bottom: rem(-5) !important; //section-titleに負けるので強制
     }
 }
 
 .contact-link__text{
     color: $green;
     font-size: rem(14);
+    line-height: 1.285;
     text-align: center;
     margin-top: rem(8);
 }

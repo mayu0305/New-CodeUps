@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .to-top {
+    display: block;
     width: rem(48);
     height: rem(48);
     margin: 0 rem(15) rem(16) auto;

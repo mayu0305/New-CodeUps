@@ -3,6 +3,7 @@
 .link-button{
     display: inline-block;
     margin-bottom: rem(4);
+    margin-right: rem(4);
     position: relative;
 
     &::before{
@@ -24,7 +25,7 @@
         color: $white;
         font-family: $second-font-family;
         font-size: rem(14);
-        padding-left: rem(40);
+        padding-left: rem(39);
         height: rem(54);
         width: rem(202);
         position: relative;
@@ -59,8 +60,8 @@
             height: rem(8);
             width: rem(42);
             position: absolute;
-            top: 50%;
-            right: rem(40);
+            top: 47%;
+            right: rem(39);
             transform: translateY(-50%);
         }
 

@@ -24,33 +24,33 @@
     border-bottom: rem(1) solid $green;
     font-size: rem(16);
     font-weight: $medium;
+    line-height: 1.4;
     margin-top: rem(4);
     padding-bottom: rem(4);
 
     @include mq("md") {
         font-size: rem(24);
-        margin-top: rem(8);
+        margin-top: rem(10);
     }
 }
 
 .voice-card__header-img{
-    flex-basis: 52.4%;
-    padding-left: rem(13);
+    flex-basis: rem(151);
+    margin-left: rem(13);
 
     @include mq("md") {
         flex-basis: rem(180);
         margin-left: rem(16);
-        padding-left: 0;
     }
 
     img{
-        aspect-ratio: 18/14;
+        aspect-ratio: 151/117;
         object-fit: cover;
     }
 }
 
 .voice-card__text{
-    margin-top: rem(15);
+    margin-top: rem(17);
 
     @include mq("md") {
         margin-top: rem(40);

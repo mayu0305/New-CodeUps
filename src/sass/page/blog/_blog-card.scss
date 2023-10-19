@@ -18,11 +18,14 @@
 .blog-card__content-title{
     font-size: rem(16);
     font-weight: $medium;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .blog-card__content-text{
     border-top: rem(1) solid $green;
-    margin-top: rem(4);
+    margin-top: rem(3.5);
     padding-top: rem(16);
     display: -webkit-box;
     -webkit-box-orient: vertical;

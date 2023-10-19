@@ -13,10 +13,9 @@
 .contact-info__logo{
     border-bottom: rem(1) solid $green;
     text-align: center;
-    padding-bottom: rem(6);
 
     @include mq("md") {
-        padding-bottom: rem(8);
+        padding-bottom: rem(2);
     }
 
     img{
@@ -49,7 +48,7 @@
     }
 
     & >*+* {
-        margin-top: rem(4);
+        margin-top: rem(3.5);
     }
 
     span{

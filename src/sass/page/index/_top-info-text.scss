@@ -17,6 +17,7 @@
 
     @include mq("md") {
         font-size: rem(24);
+        line-height: 1;
         padding-bottom: rem(8);
     }
 }
