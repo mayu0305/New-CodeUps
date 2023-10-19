@@ -31,8 +31,12 @@
     left: 0;
 
     img{
-        aspect-ratio: 40/60;
+        aspect-ratio: 128/194;
         object-fit: cover;
+
+        @include mq("md") {
+            aspect-ratio: 400/606;
+        }
     }
 }
 

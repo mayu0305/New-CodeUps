@@ -36,6 +36,7 @@
 
     @include mq("md") {
         margin-left: rem(32);
+        margin-bottom: rem(-3);
     }
 
     a{
@@ -65,6 +66,8 @@
     font-size: rem(12);
     text-align: center;
     margin-top: rem(28);
+    margin-left: rem(-1);
+    margin-right: rem(-1);
 
     @include mq("md") {
         font-size: rem(14);

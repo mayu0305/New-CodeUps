@@ -16,6 +16,7 @@
     @include mq("md") {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         box-shadow: rem(2) rem(2) rem(10) 0px rgba(0, 0, 0, 0.25);
         padding: rem(80) rem(112) rem(80) rem(50);
     }
@@ -52,7 +53,7 @@
     width: rem(109);
     height: rem(50);
     position: absolute;
-    top: rem(-26);
+    top: rem(-27);
     right: rem(15);
 
     @include mq("md") {

@@ -28,6 +28,35 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
     })();
 
+
+    //ナビメニューをエスケープキーで閉じる
+    $(document).keyup(function(e) {
+        if (e.key === "Escape") { // escape key maps to keycode `27`
+        if($('.js-drawer-open').attr('aria-expanded') == 'true'){
+            $('.js-drawer-open').trigger('click');
+        }
+        }
+    });
+
+
+    //ページ内リンクをクリック時ハンバーガーメニューを閉じる
+        $("#global-nav a[href]").on("click", function() {
+        $('#MenuButton').trigger('click');
+    });
+
+
+    // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
+
+    $(document).on('click', 'a[href*="#"]', function () {
+        let time = 400;
+        let header = $('header').innerHeight();
+        let target = $(this.hash);
+        if (!target.length) return;
+        let targetY = target.offset().top - header;
+        $('html,body').animate({ scrollTop: targetY }, time, 'swing');
+        return false;
+    });
+
 }); //jQueryここまで
 
 
@@ -51,7 +80,6 @@ const secondSwiper = new Swiper(".js-campaign-swiper", {
     grabCursor: true,
     loop: true,
     speed: 2000,
-    // spaceBetween: 24,
     centeredSlides: false,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -60,12 +88,6 @@ const secondSwiper = new Swiper(".js-campaign-swiper", {
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
-    },
-    breakpoints: {
-        // スライドの表示枚数：768px以上の場合
-        768: {
-            // spaceBetween: 40,
-        }
     }
 });
 
@@ -73,7 +95,6 @@ const secondSwiper = new Swiper(".js-campaign-swiper", {
 var box = $('.js-scroll'),
     speed = 500;
 
-//.colorboxの付いた全ての要素に対して下記の処理を行う
 box.each(function(){
     $(this).append('<div class="color"></div>')
     var color = $(this).find($('.color')),

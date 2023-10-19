@@ -1,8 +1,9 @@
 @use "global" as *;
 
 .top-blog{
-    padding-top: rem(80);
+    // padding-top: rem(80);
     position: relative;
+    padding-top: rem(79);
 
     @include mq("md") {
         padding-top: rem(100);
@@ -28,7 +29,7 @@
     height: rem(201);
     position: absolute;
     top: rem(24);
-    left: calc(50% - min(48.5vw, 39rem));
+    left: calc(50% - min(48.5vw, 38.8rem));
 }
 
 .top-blog__title{
@@ -48,11 +49,15 @@
 
 .top-blog__items{
     margin-top: rem(24);
+    margin-left: rem(6);
+    margin-right: rem(6);
 
     @include mq("md") {
         display: flex;
         justify-content: space-between;
         margin-top: rem(80);
+        margin-left: 0;
+        margin-right: 0;
     }
 
     & > *+* {
@@ -68,6 +73,7 @@
 
     @include mq("md") {
         flex-basis: calc((100% - rem(80)) / 3);
+        width: calc((100% - 5rem) / 3);
     }
 }
 

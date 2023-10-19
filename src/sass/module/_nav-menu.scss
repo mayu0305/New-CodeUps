@@ -7,6 +7,14 @@
 .nav-menu__half{
     flex-basis: 50%;
 
+    &:last-of-type{
+        padding-left: rem(11);
+
+        @include mq("md") {
+            padding-left: 0;
+        }
+    }
+
     @include mq("md") {
         display: flex;
     }
@@ -14,8 +22,20 @@
 
 .nav-menu__quarter{
 
+    &:last-of-type{
+        margin-top: rem(16);
+
+        @include mq("md") {
+            margin-top: 0;
+        }
+    }
+
     @include mq("md") {
         flex-basis: 50%;
+
+        &:not(.nav-menu__half:first-of-type .nav-menu__quarter){
+            padding-left: rem(16);
+        }
     }
 }
 

@@ -15,9 +15,11 @@
     display: flex;
     justify-content: space-between;
     font-size: rem(14);
+    line-height: 1.714;
     margin-top: rem(8);
 
     @include mq("md") {
         font-size: rem(16);
+        line-height: 1.5;
     }
 }

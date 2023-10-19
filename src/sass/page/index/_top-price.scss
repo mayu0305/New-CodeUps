@@ -2,7 +2,8 @@
 
 .top-price{
     background-color: $light-green;
-    margin-top: rem(80);
+    // margin-top: rem(80);
+    margin-top: rem(79);
     padding-top: rem(80);
     padding-bottom: rem(80);
     position: relative;
@@ -30,7 +31,7 @@
     margin-top: rem(40);
 
     & > *+* {
-        margin-top: rem(40);
+        margin-top: rem(39);
     }
 
     @include mq("md") {
@@ -68,6 +69,6 @@
     width: rem(437);
     height: rem(201);
     position: absolute;
-    left: calc(50% - min(48.5vw, 39rem));
+    left: calc(50% - min(48.5vw, 38.8rem));
     bottom: rem(60);
 }

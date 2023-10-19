@@ -24,6 +24,7 @@
     display: block;
     border-top: rem(1) solid $green;
     font-size: rem(14);
+    line-height: 1.715;
     text-align: center;
     margin-top: rem(8);
     padding-top: rem(8);
@@ -40,7 +41,11 @@
 .campaign-card__img{
 
     img{
-        aspect-ratio: 300/200;
+        aspect-ratio: 280/188;
         object-fit: cover;
+
+        @include mq("md") {
+            aspect-ratio: 300/200;
+        }
     }
 }
