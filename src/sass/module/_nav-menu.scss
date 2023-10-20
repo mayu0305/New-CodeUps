@@ -33,7 +33,7 @@
     @include mq("md") {
         flex-basis: 50%;
 
-        &:not(.nav-menu__half:first-of-type .nav-menu__quarter){
+        &:not(.nav-menu__half:first-of-type .nav-menu__quarter:first-of-type){
             padding-left: rem(16);
         }
     }
