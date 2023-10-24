@@ -6,6 +6,16 @@
     background-color: $white;
     padding: rem(16) rem(16) rem(24);
     box-shadow: rem(2) rem(2) rem(10) 0px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+
+    &:hover{
+        transform: translateY(rem(10));
+        transition: 0.3s;
+    }
+}
+
+.blog-card__content{
+    flex-grow: 1;
 }
 
 .blog-card__content-date{

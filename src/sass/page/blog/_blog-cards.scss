@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.blog-cards{
+
+    @include mq("md") {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(80) rem(40);
+    }
+
+}
+
+.blog-cards__item{
+
+    @include mq("md") {
+        flex-basis: calc((100% - rem(80)) / 3);
+        width: calc((100% - 5rem) / 3);
+    }
+}
