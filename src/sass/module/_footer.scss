@@ -41,6 +41,12 @@
 
     a{
         padding: rem(8);
+        transition: 0.3s;
+
+        &:hover{
+            opacity: 0.8;
+            transition: 0.3s;
+        }
 
         img{
             width: rem(24);
