@@ -36,8 +36,19 @@
 
     @include mq("md") {
         flex-basis: calc((100% - rem(96)) / 2);
+        width: calc((100% - rem(96)) / 2);
         margin-top: 0;
     }
+}
+
+.top-price-list__item-term{
+    flex-basis: calc(100% - 6em);
+}
+
+.top-price-list__item-desc{
+    flex-basis: 5em;
+    text-align: right;
+    padding-left: 1em;
 }
 
 .top-price__img{

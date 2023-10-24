@@ -16,7 +16,6 @@
   <meta property="og:image" content="https://lien-create.com/new-codeups/assets/images/index/fv01_pc.webp" />
   <meta property="og:site_name" content="CodeUps" />
   <meta property="og:description" content="新CodeUps課題サイトです。" />
-  <meta name=”robots” content=”noindex”>
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
   <!-- googlefonts -->
@@ -28,7 +27,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper@8.3.1/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/jquery.inview.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
@@ -44,42 +43,42 @@
         <ul class="header__nav-items">
           <li class="header__nav-item">
             <a href="">キャンペーン
-              <span>Campaign</span>
+              <span aria-hidden="true">Campaign</span>
             </a>
           </li>
           <li class="header__nav-item">
             <a href="">私たちについて
-              <span>About us</span>
+              <span aria-hidden="true">About us</span>
             </a>
           </li>
           <li class="header__nav-item">
             <a href="">ダイビング情報
-              <span>Information</span>
+              <span aria-hidden="true">Information</span>
             </a>
           </li>
           <li class="header__nav-item">
             <a href="">ブログ
-              <span>Blog</span>
+              <span aria-hidden="true">Blog</span>
             </a>
           </li>
           <li class="header__nav-item">
             <a href="">お客様の声
-              <span>Voice</span>
+              <span aria-hidden="true">Voice</span>
             </a>
           </li>
           <li class="header__nav-item">
             <a href="">料金一覧
-              <span>Price</span>
+              <span aria-hidden="true">Price</span>
             </a>
           </li>
           <li class="header__nav-item">
             <a href="">よくある質問
-              <span>FAQ</span>
+              <span aria-hidden="true">FAQ</span>
             </a>
           </li>
           <li class="header__nav-item">
             <a href="">お問合せ
-              <span>Contact</span>
+              <span aria-hidden="true">Contact</span>
             </a>
           </li>
         </ul>
@@ -234,8 +233,8 @@
     <section class="top-campaign">
       <div class="inner">
         <h2 class="section-title">
-          <span aria-hidden="true">Campaign</span>
-          キャンペーン
+          <span class="section-title--sub" aria-hidden="true">Campaign</span>
+          <span class="section-title--main">キャンペーン</span>
         </h2>
         <div class="top-campaign__contents">
           <div class="top-campaign__slider js-campaign-swiper">
@@ -348,8 +347,8 @@
     <section class="top-aboutAs">
       <div class="inner">
         <h2 class="section-title">
-          <span aria-hidden="true">About us</span>
-          私たちについて
+          <span class="section-title--sub" aria-hidden="true">About us</span>
+          <span class="section-title--main">私たちについて</span>
         </h2>
         <div class="top-aboutAs__content aboutAs-intro">
           <div class="aboutAs-intro__img">
@@ -388,8 +387,8 @@
     <section class="top-info">
       <div class="inner">
         <h2 class="section-title">
-          <span aria-hidden="true">Information</span>
-          ダイビング情報
+          <span class="section-title--sub" aria-hidden="true">Information</span>
+          <span class="section-title--main">ダイビング情報</span>
         </h2>
         <div class="top-info__content">
           <div class="top-info__content-text top-info-text">
@@ -424,11 +423,11 @@
       </div>
       <div class="inner">
         <h2 class="section-title top-blog__title">
-          <span aria-hidden="true">Blog</span>
-          ブログ
+          <span class="section-title--sub" aria-hidden="true">Blog</span>
+          <span class="section-title--main">ブログ</span>
         </h2>
-        <article class="top-blog__items">
-          <a href="" class="top-blog__item blog-card">
+        <article class="top-blog__items blog-cards">
+          <a href="" class="blog-cards__item blog-card">
             <div class="blog-card__content">
               <time class="blog-card__content-date" datetime="2023-11-17">
                 2023.11/17
@@ -445,7 +444,7 @@
               <img src="assets/images/blog/blog-post01.webp" alt="サンゴの写真" decoding="async" loading="lazy">
             </figure>
           </a><!-- blog-card -->
-          <a href="" class="top-blog__item blog-card">
+          <a href="" class="blog-cards__item blog-card">
             <div class="blog-card__content">
               <time class="blog-card__content-date" datetime="2023-11-17">
                 2023.11/17
@@ -462,7 +461,7 @@
               <img src="assets/images/blog/blog-post02.webp" alt="ウミガメの写真" decoding="async" loading="lazy">
             </figure>
           </a><!-- blog-card -->
-          <a href="" class="top-blog__item blog-card">
+          <a href="" class="blog-cards__item blog-card">
             <div class="blog-card__content">
               <time class="blog-card__content-date" datetime="2023-11-17">
                 2023.11/17
@@ -497,11 +496,11 @@
       </div>
       <div class="inner">
         <h2 class="section-title">
-          <span aria-hidden="true">Voice</span>
-          お客様の声
+          <span class="section-title--sub" aria-hidden="true">Voice</span>
+          <span class="section-title--main">お客様の声</span>
         </h2>
-        <ul class="top-voice__items">
-          <li class="top-voice__item voice-card">
+        <ul class="top-voice__items voice-cards">
+          <li class="voice-cards__item voice-card">
             <div class="voice-card__header">
               <div class="voice-card__header-text">
                 <div class="voice-card__header-status voice-status">
@@ -526,7 +525,7 @@
               ここにテキストが入ります。ここにテキストが入ります。
             </div>
           </li><!-- voice-card -->
-          <li class="top-voice__item voice-card">
+          <li class="voice-cards__item voice-card">
             <div class="voice-card__header">
               <div class="voice-card__header-text">
                 <div class="voice-card__header-status voice-status">
@@ -568,8 +567,8 @@
     <section class="top-price">
       <div class="inner">
         <h2 class="section-title">
-          <span aria-hidden="true">Price</span>
-          料金一覧
+          <span class="section-title--sub" aria-hidden="true">Price</span>
+          <span class="section-title--main">料金一覧</span>
         </h2>
         <div class="top-price__contents">
           <ul class="top-price__contents-items top-price-lists">
@@ -587,8 +586,8 @@
                   <dd class="top-price-list__item-desc">¥60,000</dd>
                 </div>
                 <div class="top-price-list__item">
-                  <dt class="price-list__item-term">レスキュー＋EFRコース</dt>
-                  <dd class="price-list__item-desc">¥70,000</dd>
+                  <dt class="top-price-list__item-term">レスキュー＋EFRコース</dt>
+                  <dd class="top-price-list__item-desc">¥70,000</dd>
                 </div>
               </dl>
             </li>
@@ -606,12 +605,12 @@
                   <dd class="top-price-list__item-desc">¥14,000</dd>
                 </div>
                 <div class="top-price-list__item">
-                  <dt class="price-list__item-term">ボート体験ダイビング(半日)</dt>
-                  <dd class="price-list__item-desc">¥10,000</dd>
+                  <dt class="top-price-list__item-term">ボート体験ダイビング(半日)</dt>
+                  <dd class="top-price-list__item-desc">¥10,000</dd>
                 </div>
                 <div class="top-price-list__item">
-                  <dt class="price-list__item-term">ボート体験ダイビング(1日)</dt>
-                  <dd class="price-list__item-desc">¥18,000</dd>
+                  <dt class="top-price-list__item-term">ボート体験ダイビング(1日)</dt>
+                  <dd class="top-price-list__item-desc">¥18,000</dd>
                 </div>
               </dl>
             </li>
@@ -629,12 +628,12 @@
                   <dd class="top-price-list__item-desc">¥18,000</dd>
                 </div>
                 <div class="top-price-list__item">
-                  <dt class="price-list__item-term">スペシャルダイビング(2ダイブ)</dt>
-                  <dd class="price-list__item-desc">¥24,000</dd>
+                  <dt class="top-price-list__item-term">スペシャルダイビング(2ダイブ)</dt>
+                  <dd class="top-price-list__item-desc">¥24,000</dd>
                 </div>
                 <div class="top-price-list__item">
-                  <dt class="price-list__item-term">ナイトダイビング(1ダイブ)</dt>
-                  <dd class="price-list__item-desc">¥10,000</dd>
+                  <dt class="top-price-list__item-term">ナイトダイビング(1ダイブ)</dt>
+                  <dd class="top-price-list__item-desc">¥10,000</dd>
                 </div>
               </dl>
             </li>

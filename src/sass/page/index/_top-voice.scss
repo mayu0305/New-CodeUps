@@ -29,8 +29,6 @@
     margin-top: rem(40);
 
     @include mq("md") {
-        display: flex;
-        justify-content: space-between;
         margin-top: rem(30);
     }
 
@@ -40,13 +38,6 @@
         @include mq("md") {
             margin-top: 0;
         }
-    }
-}
-
-.top-voice__item{
-
-    @include mq("md") {
-        flex-basis: calc((100% - rem(40)) / 2);
     }
 }
 

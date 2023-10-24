@@ -91,6 +91,26 @@ const secondSwiper = new Swiper(".js-campaign-swiper", {
     }
 });
 
+function matchHeight(targetElement) {
+    const targetElements = document.querySelectorAll(targetElement)
+
+    if (targetElements.length > 1) {
+            let heightArray = []
+            targetElements.forEach((element) => {
+            const height = element.clientHeight
+            heightArray.push(height)
+        })
+        const maxHeight = Math.max(...heightArray)
+
+        targetElements.forEach((column) => {
+            column.style.height = maxHeight + 'px'
+        })
+    }
+    }
+    window.addEventListener('load', () => {
+        matchHeight('.campaign-card__content-title')
+    })
+
 //要素の取得とスピードの設定
 var box = $('.js-scroll'),
     speed = 500;

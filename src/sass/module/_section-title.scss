@@ -12,35 +12,32 @@
     @include mq("md") {
         padding-bottom: 0;
     }
+}
 
-    span{
-        display: block;
-        color: $font-color;
-        font-family: $second-font-family;
-        font-size: rem(32);
-        line-height: 1.25;
-        margin-bottom: rem(4);
 
-        @include mq("md") {
-            font-size: rem(40);
-            line-height: 1;
-            margin-bottom: rem(8);
-        }
 
-        &::first-letter{
-            color: $green;
-        }
+.section-title--sub{
+    display: block;
+    color: $font-color;
+    font-family: $second-font-family;
+    font-size: rem(32);
+    line-height: 1.25;
+
+    @include mq("md") {
+        font-size: rem(40);
+        line-height: 1;
+    }
+
+    &::first-letter{
+        color: $green;
     }
 }
 
-// .section-title--white{
-//     color: $white;
+.section-title--main{
+    display: block;
+    margin-top: rem(4);
 
-//     span{
-//         color: $white;
-
-//         &::first-letter{
-//             color: $light-green;
-//         }
-//     }
-// }
+    @include mq("md") {
+        margin-top: rem(8);
+    }
+}
