@@ -59,8 +59,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 }); //jQueryここまで
 
-
-
 //mvスライダー
 const firstSwiper = new Swiper(".js-fv-swiper", {
     loop: true,
@@ -91,6 +89,7 @@ const secondSwiper = new Swiper(".js-campaign-swiper", {
     }
 });
 
+//キャンペーンスライダーのタイトルが増減しても高さを統一する
 function matchHeight(targetElement) {
     const targetElements = document.querySelectorAll(targetElement)
 
@@ -108,10 +107,10 @@ function matchHeight(targetElement) {
     }
     }
     window.addEventListener('load', () => {
-        matchHeight('.campaign-card__content-title')
+        matchHeight('.campaign-card')
     })
 
-//要素の取得とスピードの設定
+//スクロールアニメーション要素の取得とスピードの設定
 var box = $('.js-scroll'),
     speed = 500;
 
@@ -134,4 +133,122 @@ box.each(function(){
             counter = 1;
         }
     });
+});
+
+//タブ
+const tabs = document.querySelectorAll('.js-tab');
+
+function tabSwitch(event) {
+    const clickedTab = event.target;
+    const tabsArray = Array.from(tabs);
+    const index = tabsArray.indexOf(clickedTab);
+
+    const resetTab = function () {
+        const activeTab = document.querySelector('.js-tab.-active');
+        const activePanel = document.querySelector('.js-tab-panel.-active');
+
+        if (activeTab) {
+            activeTab.classList.remove('-active');
+            activeTab.removeAttribute('aria-selected');
+            activeTab.tabIndex = -1;
+        }
+        if (activePanel) {
+            activePanel.classList.remove('-active');
+        }
+    }
+
+    const setTab = function (tab, tabpanel) {
+        tab.classList.add('-active');
+        tab.tabIndex = 0;
+        tab.setAttribute('aria-selected', true);
+        tabpanel.classList.add('-active');
+    }
+
+    if (event.type === 'keyup') {
+        if (event.key === 'ArrowRight') {
+            if (tabsArray[index + 1]) {
+                tabsArray[index + 1].focus();
+                resetTab();
+                setTab(tabsArray[index + 1], document.querySelectorAll('.js-tab-panel')[index + 1]);
+            } else {
+                tabsArray[0].focus();
+                resetTab();
+                setTab(tabsArray[0], document.querySelectorAll('.js-tab-panel')[0]);
+            }
+        }
+        if (event.key === 'ArrowLeft') {
+            if (tabsArray[index - 1]) {
+                tabsArray[index - 1].focus();
+                resetTab();
+                setTab(tabsArray[index - 1], document.querySelectorAll('.js-tab-panel')[index - 1]);
+            } else {
+                let lastTab = tabsArray.pop();
+                lastTab.focus();
+                resetTab();
+                setTab(lastTab, Array.from(document.querySelectorAll('.js-tab-panel')).pop());
+            }
+        }
+    }
+
+    if (event.type === 'click') {
+        resetTab();
+        setTab(clickedTab, document.querySelectorAll('.js-tab-panel')[index]);
+    }
+}
+
+tabs.forEach((tab) => {
+    tab.addEventListener('click', tabSwitch);
+    tab.addEventListener('keyup', tabSwitch);
+});
+//タブココまで
+
+//FAQアコーディオン
+document.addEventListener('DOMContentLoaded', () => {
+    const details = document.querySelectorAll('.js-faqItem');
+
+        details.forEach(element => {
+        const summary = element.querySelector('.js-faqQuestion');
+        const content = element.querySelector('.js-faqAnswer');
+
+        // 初期状態で詳細が展開されるようにする
+        element.setAttribute('open', 'true');
+
+        summary.addEventListener('click', e => {
+            e.preventDefault();
+            if (element.open) {
+            const openDetails = content.animate(
+                {
+                opacity: [1, 0],
+                height: [content.offsetHeight + 'px', 0],
+                },
+                {
+                duration: 360,
+                easing: 'ease-out',
+                }
+            );
+            openDetails.onfinish = () => {
+                element.removeAttribute('open');
+            }
+            } else {
+            element.setAttribute('open', 'true');
+            const openDetails = content.animate(
+                {
+                opacity: [0, 1],
+                height: [0, content.offsetHeight + 'px'],
+                },
+                {
+                duration: 360,
+                easing: 'ease-out',
+                }
+            );
+            }
+        });
+    });
+});
+
+//ギャラリーモーダル
+MicroModal.init({
+    awaitCloseAnimation: true,
+    awaitOpenAnimation: true,
+    disableScroll: true
 });
