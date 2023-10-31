@@ -25,14 +25,16 @@
     margin-left: rem(-5);
 }
 
+.top-campaign__items{
+    padding-bottom: rem(10);
+}
+
 .top-campaign__item{
     margin-right: rem(24);
-    padding-bottom: rem(40);
     max-width: rem(280);
 
     @include mq("md") {
         margin-right: rem(40);
-        padding-bottom: rem(80);
         max-width: rem(333);
     }
 }
@@ -73,4 +75,9 @@
 
 .top-campaign__link{
     text-align: center;
+    margin-top: rem(30);
+
+    @include mq("md") {
+        margin-top: rem(70);
+    }
 }
