@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .top-campaign{
-    padding-top: rem(40);
+    margin-top: rem(40);
     overflow: hidden;
 
     @include mq("md") {
-        padding-top: rem(120);
+        margin-top: rem(120);
     }
 }
 
@@ -42,7 +42,6 @@
     height: rem(80);
     width: rem(80);
     top: rem(-83);
-
 }
 
 .top-campaign__button-prev{

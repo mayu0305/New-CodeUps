@@ -58,7 +58,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 11;
 }
 
 .fv__text-main{
@@ -67,7 +67,7 @@
     font-size: rem(40);
     letter-spacing: 0.54em;
     line-height: 1.25;
-    margin-right: -0.54em;
+    text-indent: 0.54em;
 
     @include mq("md") {
         font-size: rem(80);
