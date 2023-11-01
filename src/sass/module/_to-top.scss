@@ -1,14 +1,12 @@
 @use "global" as *;
 
 .to-top {
-    display: block;
+    // display: block;
     width: rem(48);
     height: rem(48);
     margin: 0 rem(15) rem(16) auto;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: rem(20);
     z-index: 1;
+    display: none;
 
     @include mq("md") {
         width: rem(80);

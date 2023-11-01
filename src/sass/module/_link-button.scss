@@ -1,10 +1,21 @@
 @use "global" as *;
 
 .link-button{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green;
+    border: rem(1) solid $green;
+    color: $white;
+    font-family: $second-font-family;
+    font-size: rem(14);
+    height: rem(54);
+    width: rem(202);
     margin-bottom: rem(4);
     margin-right: rem(4);
     position: relative;
+    transition: 0.3s;
+    z-index: 1;
 
     &::before{
         content: "";
@@ -13,66 +24,55 @@
         height: rem(54);
         width: rem(202);
         position: absolute;
-        top: rem(4);
-        right: rem(-4);
+        top: rem(3);
+        right: rem(-5);
+        z-index: -1;
     }
 
-    a{
-        display: flex;
-        align-items: center;
-        background-color: $green;
-        border: rem(1) solid $green;
-        color: $white;
-        font-family: $second-font-family;
-        font-size: rem(14);
-        padding-left: rem(39);
-        height: rem(54);
-        width: rem(202);
-        position: relative;
+    &::after{
+        content: "";
+        background-color: $white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+        z-index: -1;
+    }
+
+    &:hover::after,&:focus::after{
+        transform: scale(1, 1);
+    }
+
+    &:hover,&:focus{
+        color: $green;
         transition: 0.3s;
-        z-index: 1;
-
-        &::after{
-            content: "";
-            background-color: $white;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: scale(0, 1);
-            transform-origin: left top;
-            transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
-            z-index: -1;
-        }
-
-        &:hover::after,&:focus::after{
-            transform: scale(1, 1);
-        }
-
-        &::before{
-            content: "";
-            display: inline-block;
-            background-image: url(../images/common/button-arrow.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            margin-left: rem(8);
-            height: rem(8);
-            width: rem(42);
-            position: absolute;
-            top: 47%;
-            right: rem(39);
-            transform: translateY(-50%);
-        }
-
-        &:hover,&:focus{
-            color: $green;
-            transition: 0.3s;
-        }
-
-        &:hover::before,&:focus::before{
-            background-image: url(../images/common/button-arrow_hover.svg);
-        }
     }
+}
 
+.link-button__arrow{
+    margin-left: rem(8);
+    position: relative;
+    height: rem(8);
+    width: rem(42);
+
+    &::before{
+        content: "";
+        display: inline-block;
+        background-image: url(../images/common/button-arrow.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: rem(-2);
+        left: 0;
+    }
+}
+
+.link-button:hover .link-button__arrow::before{
+    background-image: url(../images/common/button-arrow_hover.svg);
 }

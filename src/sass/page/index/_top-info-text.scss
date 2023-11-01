@@ -27,6 +27,7 @@
 }
 
 .top-info-text__link{
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin-top: rem(40);
 }

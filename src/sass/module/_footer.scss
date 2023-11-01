@@ -4,10 +4,13 @@
     background-color: $green;
     padding-top: rem(48);
     padding-bottom: rem(56);
+    margin-top: rem(100);
+    position: relative;
 
     @include mq("md") {
         padding-top: rem(80);
         padding-bottom: rem(80);
+        margin-top: rem(160);
     }
 }
 
