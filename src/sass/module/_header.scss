@@ -33,6 +33,10 @@
     }
 }
 
+.header.open .header__content{
+    background-color: $green;
+}
+
 .header__logo{
     height: rem(38);
     width: rem(102);
