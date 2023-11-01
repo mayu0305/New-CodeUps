@@ -117,8 +117,7 @@
 }
 
 .aboutAs-intro__text-link{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-top: rem(50);
 
     @include mq("md") {

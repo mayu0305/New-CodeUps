@@ -67,8 +67,7 @@
 }
 
 .top-blog__link{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-top: rem(40);
 
     @include mq("md") {
