@@ -1,15 +1,14 @@
 @use "global" as *;
 
 .link-button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     background-color: $green;
     border: rem(1) solid $green;
     color: $white;
     font-family: $second-font-family;
     font-size: rem(14);
     height: rem(54);
+    line-height: rem(54);
     width: rem(202);
     margin-bottom: rem(4);
     margin-right: rem(4);
@@ -54,7 +53,8 @@
 }
 
 .link-button__arrow{
-    margin-left: rem(8);
+    display: inline-block;
+    margin-left: rem(6);
     position: relative;
     height: rem(8);
     width: rem(42);
