@@ -57,6 +57,45 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         return false;
     });
 
+
+
+    $(window).scroll(function() { //スクロールしたら処理を開始する
+
+        var pagetop = $(".to-top");
+        var scroll = $(window).scrollTop() + $(window).height(); //ページトップから現在の画面下部までの高さ
+        var footer = $("footer").offset().top; //ページトップからfooterまでの高さ
+        var absoluteBottom = $("footer").outerHeight(); //footerの高さ(margin、padding、borderの値を含める)
+
+        if ($(window).scrollTop() > $(window).height()) { //ページトップから1画面の高さ分、下にスクロールしたら
+
+            pagetop.fadeIn(); //「ページトップへ戻る」ボタンをフェードインさせる
+
+        } else {
+
+            pagetop.fadeOut(); //ページトップから1画面の高さ以内でスクロールしている場合はフェードアウト
+
+        }
+
+        if (scroll > footer) { //画面下部からfooterが現れたら
+
+            pagetop.css({
+                "position": "absolute", //固定表示を解除する
+                "bottom": absoluteBottom,
+                "right": "0",
+            });
+
+        } else {
+
+            pagetop.css({ //画面下部にfooterが現れるまでは
+                "position": "fixed", //固定表示する
+                "bottom": "0", //画面の最下部に
+                "right": "0",
+            });
+
+        }
+    });
+
+
 }); //jQueryここまで
 
 //mvスライダー
