@@ -76,8 +76,6 @@
 .top-campaign__link{
     text-align: center;
     margin-top: rem(30);
-    display: flex;
-    justify-content: center;
 
     @include mq("md") {
         margin-top: rem(70);
