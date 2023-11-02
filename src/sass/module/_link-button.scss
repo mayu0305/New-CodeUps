@@ -62,9 +62,10 @@
     &::before{
         content: "";
         display: inline-block;
-        background-image: url(../images/common/button-arrow.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
+        background-color: $white;
+        mask-image: url(../images/common/button-arrow.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
         height: 100%;
         width: 100%;
         position: absolute;
@@ -74,5 +75,5 @@
 }
 
 .link-button:hover .link-button__arrow::before{
-    background-image: url(../images/common/button-arrow_hover.svg);
+    background-color: $green;
 }
