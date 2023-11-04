@@ -31,6 +31,8 @@
 .top-campaign__item{
     margin-right: rem(24);
     max-width: rem(280);
+    display: flex;
+    height: auto;
 
     @include mq("md") {
         margin-right: rem(40);
