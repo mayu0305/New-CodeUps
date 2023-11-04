@@ -128,26 +128,38 @@ const secondSwiper = new Swiper(".js-campaign-swiper", {
     }
 });
 
-//キャンペーンスライダーのタイトルが増減しても高さを統一する
+
 function matchHeight(targetElement) {
-    const targetElements = document.querySelectorAll(targetElement)
+    const targetElements = document.querySelectorAll(targetElement);
 
     if (targetElements.length > 1) {
-            let heightArray = []
-            targetElements.forEach((element) => {
-            const height = element.clientHeight
-            heightArray.push(height)
-        })
-        const maxHeight = Math.max(...heightArray)
+        let heightArray = [];
 
-        targetElements.forEach((column) => {
-            column.style.height = maxHeight + 'px'
-        })
+        // .aside-campaign__item-card クラスを持つ要素を除外して高さを取得
+        targetElements.forEach((element) => {
+            if (!element.classList.contains('aside-campaign__item-card')) {
+                const height = element.clientHeight;
+                heightArray.push(height);
+            }
+        });
+
+        if (heightArray.length > 0) {
+            const maxHeight = Math.max(...heightArray);
+
+            // .aside-campaign__item-card クラスを持つ要素を除外して高さを設定
+            targetElements.forEach((column) => {
+                if (!column.classList.contains('aside-campaign__item-card')) {
+                    column.style.height = maxHeight + 'px';
+                }
+            });
+        }
     }
-    }
-    window.addEventListener('load', () => {
-        matchHeight('.campaign-card')
-    })
+}
+
+window.addEventListener('load', () => {
+    matchHeight('.campaign-card');
+});
+
 
 //スクロールアニメーション要素の取得とスピードの設定
 var box = $('.js-scroll'),
