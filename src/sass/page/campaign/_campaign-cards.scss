@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.campaign-cards{
+    margin-top: rem(40);
+
+    & > *+* {
+        margin-top: rem(40);
+
+        @include mq("md") {
+            margin-top: 0;
+        }
+    }
+
+    @include mq("md") {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(80) rem(40);
+    }
+}
+
+.campaign-cards__item {
+    flex-basis: calc((100% - rem(40)) / 2);
+}
