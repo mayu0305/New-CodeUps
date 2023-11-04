@@ -1,12 +1,5 @@
 @use "global" as *;
 
-.top-aboutAs{
-    margin-top: rem(80);
-
-    @include mq("md") {
-        margin-top: rem(140);
-    }
-}
 
 .top-aboutAs__content{
     margin-top: rem(24);
