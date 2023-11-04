@@ -1,12 +1,7 @@
 @use "global" as *;
 
 .section-contact{
-    margin-top: rem(80);
     position: relative;
-
-    @include mq("md") {
-        margin-top: rem(140);
-    }
 }
 
 .section-contact__content{
