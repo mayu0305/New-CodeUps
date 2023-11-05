@@ -16,27 +16,27 @@
 
 .blog-card__content{
     flex-grow: 1;
+    margin-top: rem(24);
 }
 
 .blog-card__content-date{
-    display: inline-block;
+    display: block;
     font-size: rem(12);
     font-family: $second-font-family;
-    padding-top: rem(24);
 }
 
 .blog-card__content-title{
+    border-bottom: rem(1) solid $green;
     font-size: rem(16);
     font-weight: $medium;
+    padding-bottom: rem(3.5);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .blog-card__content-text{
-    border-top: rem(1) solid $green;
-    margin-top: rem(3.5);
-    padding-top: rem(16);
+    margin-top: rem(16);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;

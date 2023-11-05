@@ -10,6 +10,22 @@
         padding-top: rem(100);
         padding-bottom: rem(100);
     }
+
+    &::before{
+
+        @include mq("md") {
+            content: "";
+            display: block;
+            background-image: url(../images/common/icon-fish--left.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: rem(437);
+            height: rem(201);
+            position: absolute;
+            left: calc(50% - min(48.5vw, 38.8rem));
+            bottom: rem(60);
+        }
+    }
 }
 
 .top-price__contents{
@@ -73,10 +89,10 @@
     }
 }
 
-.top-price__illust{
-    width: rem(437);
-    height: rem(201);
-    position: absolute;
-    left: calc(50% - min(48.5vw, 38.8rem));
-    bottom: rem(60);
-}
+// .top-price__illust{
+//     width: rem(437);
+//     height: rem(201);
+//     position: absolute;
+//     left: calc(50% - min(48.5vw, 38.8rem));
+//     bottom: rem(60);
+// }

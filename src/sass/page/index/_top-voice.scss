@@ -1,28 +1,23 @@
 @use "global" as *;
 
 .top-voice{
-    margin-top: rem(80);
     position: relative;
 
-    @include mq("md") {
-        margin-top: rem(140);
+    &::before{
+
+        @include mq("md") {
+            content: "";
+            display: block;
+            background-image: url(../images/common/icon-fish--right.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: rem(301);
+            height: rem(138);
+            position: absolute;
+            top: rem(-120);
+            left: calc(50% - min(48.5vw, 38.8rem));
+        }
     }
-}
-
-.top-voice__illust01{
-    width: rem(301);
-    height: rem(138);
-    position: absolute;
-    top: rem(-120);
-    left: calc(50% - min(48.5vw, 38.8rem));
-}
-
-.top-voice__illust02{
-    width: rem(71);
-    height: rem(162);
-    position: absolute;
-    top: rem(-37);
-    right: 0;
 }
 
 .top-voice__items{
@@ -48,5 +43,21 @@
 
     @include mq("md") {
         margin-top: rem(80);
+    }
+
+    &::after{
+
+        @include mq("md") {
+            content: "";
+            display: block;
+            background-image: url(../images/common/icon-seahorse.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: rem(71);
+            height: rem(162);
+            position: absolute;
+            top: rem(-37);
+            right: 0;
+        }
     }
 }
