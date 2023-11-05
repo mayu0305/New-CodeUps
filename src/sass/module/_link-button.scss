@@ -52,6 +52,24 @@
     }
 }
 
+.link-button--404{
+    border: rem(1) solid $white;
+    background-color: $white;
+    color: $green;
+
+    &::before{
+        border: rem(1) solid $white;
+    }
+
+    &::after{
+        background-color: $green;
+    }
+
+    &:hover,&:focus{
+        color: $white;
+    }
+}
+
 .link-button__arrow{
     display: inline-block;
     margin-left: rem(6);
@@ -74,6 +92,17 @@
     }
 }
 
+.link-button__arrow--white{
+
+    &::before{
+        background-color: $green;
+    }
+}
+
 .link-button:hover .link-button__arrow::before{
     background-color: $green;
+}
+
+.link-button:hover .link-button__arrow--white::before{
+    background-color: $white;
 }

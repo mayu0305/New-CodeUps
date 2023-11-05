@@ -68,7 +68,12 @@
     }
 }
 
+.nav-menu__item--sitemap{
 
+    a{
+        color: $font-color;
+    }
+}
 
 .nav-menu__item > a::before {
     content: "";
@@ -79,4 +84,8 @@
     position: absolute;
     left: 0;
     top: rem(12);
+}
+
+.nav-menu__item--sitemap > a::before {
+    background-image: url(../images/common/icon-starfish--black.svg);
 }

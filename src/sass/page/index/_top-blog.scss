@@ -7,6 +7,22 @@
     @include mq("md") {
         padding-top: rem(100);
     }
+
+    &::before{
+
+        @include mq("md") {
+            content: "";
+            display: block;
+            background-image: url(../images/common/icon-fish--white.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: rem(437);
+            height: rem(201);
+            position: absolute;
+            top: rem(24);
+            left: calc(50% - min(48.5vw, 38.8rem));
+        }
+    }
 }
 
 .top-blog__bg{
@@ -21,14 +37,6 @@
         object-fit: cover;
         height: 100%;
     }
-}
-
-.top-blog__illust{
-    width: rem(437);
-    height: rem(201);
-    position: absolute;
-    top: rem(24);
-    left: calc(50% - min(48.5vw, 38.8rem));
 }
 
 .top-blog__title{

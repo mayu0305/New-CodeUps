@@ -3,16 +3,25 @@
 
 .top-aboutAs__content{
     margin-top: rem(24);
+    position: relative;
 
     @include mq("md") {
         margin-top: rem(40);
     }
-}
 
-.top-aboutAs__content-illust{
-    width: rem(194);
-    height: rem(181);
-    position: absolute;
-    right: calc(50% - min(48.5vw, 39.8rem));
-    bottom: rem(-90);
+    &::before{
+
+        @include mq("md") {
+            content: "";
+            display: block;
+            background-image: url(../images/common/icon-coral.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: rem(194);
+            height: rem(181);
+            position: absolute;
+            right: calc(50% - min(48.5vw, 39.8rem));
+            bottom: rem(-90);
+        }
+    }
 }
