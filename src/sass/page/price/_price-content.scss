@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.price-content__inner{
+
+    @include mq("md") {
+        max-width: rem(700);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.price-content__items{
+
+    & > *+* {
+        margin-top: rem(40);
+
+        @include mq("md") {
+            margin-top: rem(80);
+        }
+    }
+}
+
+.price-content__item{
+    border: rem(1) solid $green;
+
+    @include mq("md") {
+        display: flex;
+    }
+}
+
+.price-content__item-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $green;
+    color: $white;
+    font-size: rem(16);
+    font-weight: $bold;
+    height: rem(40);
+    position: relative;
+
+    @include mq("md") {
+        flex-basis: rem(200);
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    &::before{
+        content: "";
+        display: block;
+        background-image: url(../images/common/icon-whale--white.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: rem(24);
+        width: rem(24);
+        margin-right: rem(8);
+
+        @include mq("md") {
+            height: rem(64);
+            width: rem(64);
+            margin-top: rem(8);
+            margin-right: 0;
+        }
+    }
+}
+
+.price-content__item-dlist{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
