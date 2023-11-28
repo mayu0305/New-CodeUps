@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.aside-archive{
+    margin-left: rem(25);
+    margin-right: rem(25);
+
+    @include mq("md") {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.aside-archive__items{
+    margin-top: rem(24);
+}
+
+.aside-archive__item{
+    color: $green;
+    font-size: rem(24);
+}
+
+.aside-archive__item-lists{
+    padding-left: 1em;
+    list-style: inside disclosure-closed;
+}
