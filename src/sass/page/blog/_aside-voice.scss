@@ -1,0 +1,44 @@
+
+@use "global" as *;
+
+.aside-voice{
+    margin-left: rem(25);
+    margin-right: rem(25);
+
+    @include mq("md") {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.aside-voice__items{
+    margin-top: rem(24);
+}
+
+.aside-voice__item{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.aside-voice__item-text{
+    margin-top: rem(16);
+}
+
+.aside-voice-status{
+    font-size: rem(12);
+}
+
+.aside-voice__title{
+    font-size: rem(24);
+    font-weight: $medium;
+    line-height: 1.45;
+    margin-top: rem(8);
+}
+
+.aside-voice__img{
+
+    img{
+        aspect-ratio: 294/218;
+        object-fit: cover;
+    }
+}

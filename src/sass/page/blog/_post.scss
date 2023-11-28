@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.post__content-body{
+
+    & > *{
+        margin-top: rem(24);
+
+        @include mq("md") {
+            margin-top: rem(40);
+        }
+    }
+
+    ul,ol{
+
+        & >*+*{
+            margin-top: rem(4);
+        }
+    }
+
+    li{
+        position: relative;
+        padding-left: rem(27);
+
+
+        &::before{
+            background-image: url(../images/common/icon-starfish--green.svg);
+            content: "";
+            display: inline-block;
+            height: rem(18);
+            left: 0;
+            position: absolute;
+            top: rem(4);
+            width: rem(18);
+        }
+    }
+}
+
+.post__content-date{
+    font-size: rem(14);
+    font-family: $second-font-family;
+    line-height: 1.286;
+}
+
+.post__content-title{
+    border-bottom: rem(1) solid $green;
+    font-size: rem(24);
+    font-weight: $bold;
+    line-height: 1.56;
+    padding-bottom: rem(4);
+    margin-top: rem(8);
+
+    @include mq("md") {
+        font-size: rem(32);
+        line-height: 1.4;
+        padding-bottom: 0;
+    }
+}
