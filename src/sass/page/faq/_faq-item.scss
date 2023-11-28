@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.faq-item__question {
+    position: relative;
+    display: block;
+    color: $white;
+    background-color: $green;
+    font-size: rem(16);
+    cursor: pointer;
+    padding: rem(15.5) rem(40) rem(15.5) rem(16);
+
+    @include mq("md") {
+        font-size: rem(20);
+        padding: rem(25) rem(200) rem(25) rem(40);
+    }
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    &::before {
+        display: block;
+        content: "";
+        background-color: $white;
+        height: rem(1);
+        width: rem(28);
+        position: absolute;
+        top: 50%;
+        right: rem(16);
+        transition: all 0.4s ease-out;
+        transform-origin: center;
+        transform: rotate(90deg) translateY(-50%);
+
+        @include mq("md") {
+            width: rem(32);
+            right: rem(40);
+        }
+
+        .faq-content__item[open] & {
+        transform: rotate(0deg);
+        }
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        background-color: $white;
+        height: rem(1);
+        width: rem(28);
+        position: absolute;
+        top: 50%;
+        right: rem(16);
+        transition: all 0.4s ease-out;
+        transform-origin: center;
+        transform: translateY(-50%);
+
+        @include mq("md") {
+            width: rem(32);
+            right: rem(40);
+        }
+
+        .faq-content__item[open] & {
+        transform: rotate(90deg);
+        opacity: 0;
+        }
+    }
+}
+
+.faq-item__answer {
+    overflow: hidden;
+}
+
+.faq-item__answer-text{
+    border: rem(1) solid $green;
+        padding: rem(24) rem(16);
+
+    @include mq("md") {
+        padding: rem(40 );
+        margin-top: rem(16);
+    }
+}
