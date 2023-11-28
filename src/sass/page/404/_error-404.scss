@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.error-404{
+    background-color: $green;
+    padding-top: rem(80);
+
+    @include mq("md") {
+        padding-top: rem(90);
+    }
+}
+
+.error-404__area{
+    background-image: url(../images/404/bg-404.svg);
+    background-size: rem(345) rem(345);
+    background-repeat: no-repeat;
+    background-position: top rem(-25) center;
+    margin-top: 0;
+
+    padding-top: rem(52);
+    padding-bottom: rem(40);
+
+    @include mq("md") {
+        background-size: rem(698) rem(698);
+        background-position: top rem(-25) left;
+
+        padding-top: rem(120);
+        padding-bottom: rem(150);
+    }
+}
+
+.error-404__title{
+    color: $white;
+    font-family: $num-font-family;
+    font-size: rem(80);
+    font-weight: $regular;
+    text-align: center;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    line-height: 1.2;
+
+    @include mq("md") {
+        font-size: rem(160);
+    }
+}
+
+.error-404__text{
+    color: $white;
+    text-align: center;
+}
+
+.error-404____link{
+    margin-top: rem(40);
+    text-align: center;
+}
