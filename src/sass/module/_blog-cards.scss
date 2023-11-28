@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.blog-cards{
+
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-wrap: wrap;
+        gap: rem(80) rem(40);
+    }
+
+}
+
+.blog-cards--page{
+    margin-left: rem(6);
+    margin-right: rem(6);
+
+    @include mq("md") {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

@@ -84,7 +84,7 @@
         </ul>
       </nav>
 
-      <div class="header__nav--sp js-drawer-menu" id="global-nav">
+      <div class="header__nav-sp js-drawer-menu" id="global-nav">
         <div class="inner">
           <nav class="nav-menu">
             <div class="nav-menu__half">
@@ -94,7 +94,7 @@
                     <a href="">キャンペーン</a>
                   </li>
                   <li class="nav-menu__item sub-menu">
-                    <ul class="nav-menu__items">
+                    <ul class="sub-menu__items">
                       <li class="sub-menu__item">
                         <a href="">ライセンス取得</a>
                       </li>
@@ -117,7 +117,7 @@
                     <a href="">ダイビング情報</a>
                   </li>
                   <li class="nav-menu__item sub-menu">
-                    <ul class="nav-menu__items">
+                    <ul class="sub-menu__items">
                       <li class="sub-menu__item">
                         <a href="">ライセンス講習</a>
                       </li>
@@ -145,7 +145,7 @@
                     <a href="">料金一覧</a>
                   </li>
                   <li class="nav-menu__item sub-menu">
-                    <ul class="nav-menu__items">
+                    <ul class="sub-menu__items">
                       <li class="sub-menu__item">
                         <a href="">ライセンス講習</a>
                       </li>
@@ -233,10 +233,10 @@
     <section class="top-campaign top-section top-section--campaign">
       <div class="inner">
         <div class="campaign__inner">
-          <h2 class="section-title">
-            <span class="section-title--sub" aria-hidden="true">Campaign</span>
-            <span class="section-title--main">キャンペーン</span>
-          </h2>
+          <div class="section-title">
+            <span class="section-title__sub" aria-hidden="true">Campaign</span>
+            <h2 class="section-title__main">キャンペーン</h2>
+          </div>
           <div class="top-campaign__contents">
             <div class="top-campaign__slider js-campaign-swiper">
               <ul class="swiper-wrapper top-campaign__items">
@@ -255,9 +255,9 @@
                           <span class="campaign-card__content-desc">
                             全部コミコミ(お一人様)
                           </span>
-                          <div class="campaign-card__content-price campaign-price">
-                            <span class="campaign-price__regular">¥56,000</span>
-                            <span class="campaign-price__sale">¥46,000</span>
+                          <div class="campaign-card__content-price">
+                            <span class="campaign-card__content-price-regular">¥56,000</span>
+                            <span class="campaign-card__content-price-sale">¥46,000</span>
                           </div>
                         </div>
                       </div><!-- campaign-card__content-->
@@ -282,8 +282,8 @@
                             全部コミコミ(お一人様)
                           </span>
                           <div class="campaign-card__content-price campaign-price">
-                            <span class="campaign-price__regular">¥24,000</span>
-                            <span class="campaign-price__sale">¥18,000</span>
+                            <span class="campaign-card__content-price-regular">¥24,000</span>
+                            <span class="campaign-card__content-price-sale">¥18,000</span>
                           </div>
                         </div>
                       </div><!-- campaign-card__content-->
@@ -308,8 +308,8 @@
                             全部コミコミ(お一人様)
                           </span>
                           <div class="campaign-card__content-price campaign-price">
-                            <span class="campaign-price__regular">¥10,000</span>
-                            <span class="campaign-price__sale">¥8,000</span>
+                            <span class="campaign-card__content-price-regular">¥10,000</span>
+                            <span class="campaign-card__content-price-sale">¥8,000</span>
                           </div>
                         </div>
                       </div><!-- campaign-card__content-->
@@ -334,8 +334,8 @@
                             全部コミコミ(お一人様)
                           </span>
                           <div class="campaign-card__content-price campaign-price">
-                            <span class="campaign-price__regular">¥20,000</span>
-                            <span class="campaign-price__sale">¥16,000</span>
+                            <span class="campaign-card__content-price-regular">¥20,000</span>
+                            <span class="campaign-card__content-price-sale">¥16,000</span>
                           </div>
                         </div>
                       </div><!-- campaign-card__content-->
@@ -364,10 +364,10 @@
 
     <section class="top-aboutAs top-section">
       <div class="inner">
-        <h2 class="section-title">
-          <span class="section-title--sub" aria-hidden="true">About us</span>
-          <span class="section-title--main">私たちについて</span>
-        </h2>
+        <div class="section-title">
+          <span class="section-title__sub" aria-hidden="true">About us</span>
+          <h2 class="section-title__main">私たちについて</h2>
+        </div>
         <div class="top-aboutAs__content aboutAs-intro">
           <div class="aboutAs-intro__img">
             <figure class="aboutAs-intro__img-main">
@@ -401,10 +401,10 @@
 
     <section class="top-info top-section">
       <div class="inner">
-        <h2 class="section-title">
-          <span class="section-title--sub" aria-hidden="true">Information</span>
-          <span class="section-title--main">ダイビング情報</span>
-        </h2>
+        <div class="section-title">
+          <span class="section-title__sub" aria-hidden="true">Information</span>
+          <h2 class="section-title__main">ダイビング情報</h2>
+        </div>
         <div class="top-info__content">
           <div class="top-info__content-text top-info-text">
             <h3 class="top-info-text__title">
@@ -430,14 +430,11 @@
     </section><!-- top-information -->
 
     <section class="top-blog">
-      <div class="top-blog__bg u-desktop">
-        <img src="assets/images/index/top-blog-header.webp" alt="" decoding="async" loading="lazy">
-      </div>
       <div class="inner">
-        <h2 class="section-title top-blog__title">
-          <span class="section-title--sub" aria-hidden="true">Blog</span>
-          <span class="section-title--main">ブログ</span>
-        </h2>
+        <div class="section-title section-title--white">
+          <span class="section-title__sub" aria-hidden="true">Blog</span>
+          <h2 class="section-title__main">ブログ</h2>
+        </div>
         <article class="top-blog__items blog-cards">
           <a href="" class="blog-cards__item blog-card">
             <div class="blog-card__content">
@@ -504,10 +501,10 @@
 
     <section class="top-voice top-section">
       <div class="inner">
-        <h2 class="section-title">
-          <span class="section-title--sub" aria-hidden="true">Voice</span>
-          <span class="section-title--main">お客様の声</span>
-        </h2>
+        <div class="section-title">
+          <span class="section-title__sub" aria-hidden="true">Voice</span>
+          <h2 class="section-title__main">お客様の声</h2>
+        </div>
         <ul class="top-voice__items voice-cards">
           <li class="voice-cards__item voice-card">
             <div class="voice-card__header">
@@ -572,10 +569,10 @@
 
     <section class="top-price top-section">
       <div class="inner">
-        <h2 class="section-title">
-          <span class="section-title--sub" aria-hidden="true">Price</span>
-          <span class="section-title--main">料金一覧</span>
-        </h2>
+        <div class="section-title">
+          <span class="section-title__sub" aria-hidden="true">Price</span>
+          <h2 class="section-title__main">料金一覧</h2>
+        </div>
         <div class="top-price__contents">
           <ul class="top-price__contents-items top-price-lists">
             <li class="top-price-list">
@@ -696,10 +693,10 @@
             </div><!-- contact-info__box-->
           </div><!-- section-contact__content-info contact-info -->
           <div class="section-contact__content-link contact-link">
-            <h2 class="section-title contact-link__title">
-              <span class="section-title--sub" aria-hidden="true">Contact</span>
-              お問い合わせ
-            </h2>
+            <div class="section-title section-title--contact">
+              <span class="section-title__sub" aria-hidden="true">Contact</span>
+              <h2 class="section-title__main">お問い合わせ</h2>
+            </div>
             <p class="contact-link__text">
               ご予約・お問い合わせはコチラ
             </p>
@@ -744,7 +741,7 @@
                   <a href="">キャンペーン</a>
                 </li>
                 <li class="nav-menu__item sub-menu">
-                  <ul class="nav-menu__items">
+                  <ul class="sub-menu__items">
                     <li class="sub-menu__item">
                       <a href="">ライセンス取得</a>
                     </li>
@@ -767,7 +764,7 @@
                   <a href="">ダイビング情報</a>
                 </li>
                 <li class="nav-menu__item sub-menu">
-                  <ul class="nav-menu__items">
+                  <ul class="sub-menu__items">
                     <li class="sub-menu__item">
                       <a href="">ライセンス講習</a>
                     </li>
@@ -795,7 +792,7 @@
                   <a href="">料金一覧</a>
                 </li>
                 <li class="nav-menu__item sub-menu">
-                  <ul class="nav-menu__items">
+                  <ul class="sub-menu__items">
                     <li class="sub-menu__item">
                       <a href="">ライセンス講習</a>
                     </li>

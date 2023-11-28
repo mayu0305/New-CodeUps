@@ -23,33 +23,20 @@
             left: calc(50% - min(48.5vw, 38.8rem));
         }
     }
-}
 
-.top-blog__bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: rem(500);
-    z-index: -1;
-
-    img{
-        object-fit: cover;
-        height: 100%;
-    }
-}
-
-.top-blog__title{
-
-    @include mq("md") {
-        color: $white;
-
-        span{
-            color: $white;
-
-            &::first-letter{
-                color: $light-green;
-            }
+    &::after{
+        @include mq("md") {
+            content: "";
+            display: block;
+            background-image: url(../images/index/top-blog-header.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: rem(500);
+            z-index: -1;
         }
     }
 }
