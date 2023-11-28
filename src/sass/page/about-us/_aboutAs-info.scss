@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.aboutAs-info__illust{
+
+    @include mq("md") {
+        position: absolute;
+        width: rem(301);
+        height: rem(138);
+        top: calc(100% + rem(40));
+        right: calc(50% - min(48.5vw, 41.8rem));
+    }
+}
