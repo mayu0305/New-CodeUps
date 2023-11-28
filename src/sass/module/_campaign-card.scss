@@ -41,9 +41,18 @@
     }
 }
 
-.campaign-card__content-price{
-    margin-top: rem(8);
-}
+// .campaign-card__content-price{
+//     margin-top: rem(8);
+// }
+
+.campaign-price{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: $num-font-family;
+    font-weight: $bold;
+    line-height: 1;
+    margin-top: rem(8);}
 
 .campaign-card__img{
 

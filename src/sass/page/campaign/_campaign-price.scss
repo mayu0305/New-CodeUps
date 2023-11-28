@@ -1,15 +1,8 @@
 @use "global" as *;
 
-.campaign-price{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-family: $num-font-family;
-    font-weight: $bold;
-    line-height: 1;
-}
 
-.campaign-price__regular{
+
+.campaign-card__content-price-regular{
     display: inline-block;
     font-size: rem(20);
     padding-bottom: rem(4);
@@ -34,7 +27,7 @@
     }
 }
 
-.campaign-price__sale{
+.campaign-card__content-price-sale{
     display: inline-block;
     color: $green;
     font-size: rem(32);

@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.blog-content__body{
+
+    @include mq("md") {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: rem(80);
+    }
+}
+
+.blog-content__main{
+    flex-basis: rem(706);
+}
+
+.blog-content__main-items{
+
+    @include mq("md") {
+        & > *+*{
+            margin-top: 0;
+        }
+    }
+}
+
+.blog-content__side{
+    margin-top: rem(80);
+
+    @include mq("md") {
+        flex-basis: rem(294);
+        width: rem(294);
+        margin-top: 0;
+    }
+}
+
+.blog-content__page-nav{
+    margin-top: rem(80);
+}
