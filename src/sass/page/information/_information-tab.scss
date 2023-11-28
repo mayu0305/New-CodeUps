@@ -1,0 +1,112 @@
+@use "global" as *;
+
+.information-tab__items {
+    display: flex;
+    gap: rem(19.5);
+
+    @include mq("md") {
+        gap: rem(90);
+    }
+}
+
+.information-tab__item {
+    background-color: $light-green;
+    cursor: pointer;
+    flex: 1;
+    flex-basis: calc((100% - rem(39)) / 3);
+    color: $green;
+    font-size: rem(14);
+    max-width: rem(102);
+    height: rem(60);
+
+    @include mq("md") {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: calc((100% - rem(180)) / 3);
+        font-size: rem(24);
+        max-width: rem(300);
+        height: rem(90);
+        position: relative;
+
+        &::before{
+            content: "";
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            width: rem(64);
+            height: rem(64);
+            margin-right: rem(8);
+        }
+
+        &:first-of-type::before{
+            background-image: url(../images/common/icon-whale--green.svg);
+        }
+
+        &:nth-of-type(2)::before{
+            background-image: url(../images/common/icon-shark--green.svg);
+        }
+
+        &:nth-of-type(3)::before{
+            background-image: url(../images/common/icon-little-fish--green.svg);
+        }
+
+        span{
+            display: inline-block;
+            margin-left: rem(8);
+        }
+    }
+}
+.information-tab__item.-active {
+    background-color: $green;
+    color: $white;
+    box-shadow: rem(2) rem(2) rem(10) 0px rgba(0, 0, 0, 0.25);
+
+    .information-tab__item-icon{
+        display: none;
+    }
+
+    &:first-of-type::before{
+        background-image: url(../images/common/icon-whale--white.svg);
+    }
+
+    &:nth-of-type(2)::before{
+        background-image: url(../images/common/icon-shark--white.svg);
+    }
+
+    &:nth-of-type(3)::before{
+        background-image: url(../images/common/icon-little-fish--white.svg);
+    }
+}
+
+.information-tab__item-icon--active{
+    display: none;
+}
+
+.information-tab__panel {
+    display: none;
+    border: rem(1) solid $green;
+    padding: rem(24);
+    margin-top: rem(16);
+
+    @include mq("md") {
+        margin-top: rem(24);
+    }
+}
+
+.information-tab__panel.-active {
+    display: block;
+    animation-name: panelFade;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes panelFade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
