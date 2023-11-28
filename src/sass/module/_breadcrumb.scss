@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.breadcrumb{
+    margin-top: rem(8);
+}
+
+.breadcrumb__inner{
+    position: relative;
+
+    &::before{
+        content: "";
+        display: block;
+        background-image: url(../images/common/icon-fish--right.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: rem(120);
+        height: rem(55);
+        position: absolute;
+        top: calc(100% + rem(28));
+        left: rem(15);
+        z-index: -1;
+
+        @include mq("md") {
+            width: rem(301);
+            height: rem(138);
+            top: calc(100% + rem(80));
+            left: calc(50% - min(48.5vw, 38.8rem));
+        }
+    }
+}
+
+.breadcrumb__inner--sitemap{
+
+    &::before{
+        content: none;
+    }
+}
+
+.breadcrumb__items{
+    display: flex;
+}
+
+.breadcrumb__item{
+    font-size: rem(14);
+    text-transform: uppercase;
+    position: relative;
+
+    a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    &:not(:first-of-type){
+        padding-left: rem(20);
+
+        &::before{
+            content: "";
+            display: inline-block;
+            background-color: $font-color;
+            mask-image: url(../images/common/breadcrumb-arrow.svg);
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            height: rem(9);
+            width: rem(5);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: rem(8);
+        }
+    }
+}
+
+.breadcrumb--404{
+    color: $white;
+
+    .breadcrumb__item:not(:first-of-type)::before{
+        background-color: $white;
+    }
+}

@@ -14,9 +14,34 @@
     }
 }
 
+.section-title--white{
+
+    @include mq("md") {
+        color: $white;
+
+        span{
+            color: $white;
+
+            &::first-letter{
+                color: $light-green;
+            }
+        }
+    }
+}
+
+.section-title--contact{
+    padding-bottom: 0;
+
+    span{
+        font-size: rem(80);
+        line-height: 1;
+        margin-bottom: rem(-5);
+    }
+}
 
 
-.section-title--sub{
+
+.section-title__sub{
     display: block;
     color: $font-color;
     font-family: $second-font-family;
@@ -33,8 +58,9 @@
     }
 }
 
-.section-title--main{
-    display: block;
+.section-title__main{
+    font-size: rem(12);
+    font-weight: $regular;
     margin-top: rem(4);
 
     @include mq("md") {
