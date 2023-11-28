@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.page-content{
+    margin-top: rem(52);
+
+    @include mq("md") {
+        margin-top: rem(150);
+    }
+}
+
+.page-content--404{
+    margin-top: 0;
+    // padding-bottom: rem(40);
+    // padding-top: rem(52);
+
+    @include mq("md") {
+        // padding-bottom: rem(150);
+        // padding-top: rem(150);
+        margin-top: 0;
+    }
+}
