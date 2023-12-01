@@ -2,6 +2,9 @@
 
 .campaign-cards{
     margin-top: rem(40);
+    width: 81.15%;
+    margin-left: auto;
+    margin-right: auto;
 
     & > *+* {
         margin-top: rem(40);
@@ -15,6 +18,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: rem(80) rem(40);
+        width: auto;
     }
 }
 

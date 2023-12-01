@@ -16,6 +16,7 @@
 
         @include mq("md") {
             width: calc(100% - rem(44));
+            height:  rem(548);
             top: rem(124);
         }
     }
