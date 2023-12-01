@@ -4,6 +4,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: rem(16) rem(21);
+
+    @include mq("md") {
+        gap: rem(16) rem(32);
+    }
 }
 
 .course-tab__item {
@@ -33,15 +37,15 @@
     // }
 }
 
-.course-tab__panel--campaign{
-    margin-left: rem(32);
-    margin-right: rem(32);
+// .course-tab__panel--campaign{
+//     margin-left: rem(32);
+//     margin-right: rem(32);
 
-    @include mq("md") {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
+//     @include mq("md") {
+//         margin-left: 0;
+//         margin-right: 0;
+//     }
+// }
 
 .course-tab__panel.-active {
     display: block;

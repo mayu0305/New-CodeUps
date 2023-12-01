@@ -38,3 +38,9 @@
         padding-left: rem(27);
     }
 }
+
+.campaign-card__content-price-sale--page{
+    @include mq("md") {
+        padding-left: rem(40);
+    }
+}
