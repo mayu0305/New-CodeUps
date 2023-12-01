@@ -46,15 +46,17 @@
     position: relative;
 
     &::before{
-        content: "";
-        display: block;
-        background-color: $green;
-        height: rem(255);
-        width: rem(1);
-        position: absolute;
-        top: 50%;
-        left: rem(-81);
-        transform: translateY(-50%);
+        @include mq("md") {
+            content: "";
+            display: block;
+            background-color: $green;
+            height: rem(255);
+            width: rem(1);
+            position: absolute;
+            top: 50%;
+            left: rem(-81);
+            transform: translateY(-50%);
+        }
     }
 
     @include mq("md") {
