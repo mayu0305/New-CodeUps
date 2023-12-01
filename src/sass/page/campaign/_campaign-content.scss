@@ -1,5 +1,26 @@
 @use "global" as *;
 
+.campaign-content{
+    position: relative;
+
+    &::before{
+        content: "";
+        display: block;
+        background-color: $light-green;
+        width: calc(100% - rem(92));
+        height:  rem(460);
+        position: absolute;
+        top: rem(-46);
+        right: 0;
+        z-index: -10;
+
+        @include mq("md") {
+            width: calc(100% - rem(44));
+            top: rem(124);
+        }
+    }
+}
+
 .campaign-content__page-nav{
     margin-top: rem(80);
 }
