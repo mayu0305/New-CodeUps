@@ -61,6 +61,14 @@
 .section-title__main{
     font-size: rem(12);
     font-weight: $regular;
+    margin-top: rem(4);
+
+    @include mq("md") {
+        margin-top: rem(8);
+    }
+}
+
+.section-title__main--contact{
     margin-top: 0;
 
     @include mq("md") {
