@@ -61,7 +61,7 @@
 .section-title__main{
     font-size: rem(12);
     font-weight: $regular;
-    margin-top: rem(4);
+    margin-top: 0;
 
     @include mq("md") {
         margin-top: rem(8);
