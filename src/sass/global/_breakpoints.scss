@@ -54,16 +54,16 @@ $mediaquerys: (
 @if $startFrom == sp {
   //pcで表示
   .u-desktop {
-    display: none !important;
+    display: none;
     @include mq("md") {
-      display: block !important;
+      display: block;
     }
   }
 
   //モバイルのみ表示
   .u-mobile {
     @include mq("md") {
-      display: none !important;
+      display: none;
     }
   }
 } @else {
