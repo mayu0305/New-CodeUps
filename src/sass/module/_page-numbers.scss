@@ -75,3 +75,11 @@
         transition: 0.3s;
     }
 }
+
+.page-numbers--pc-only{
+    display: none;
+
+    @include mq("md") {
+        display: flex;
+    }
+}
