@@ -20,6 +20,21 @@
     flex-grow: 1;
 }
 
+.voice-card__header-status{
+
+    @include mq("md") {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.voice-card__header-demographic{
+    display: block;
+    font-size: rem(12);
+}
+
+
 .voice-card__header-title{
     border-bottom: rem(1) solid $green;
     font-size: rem(16);

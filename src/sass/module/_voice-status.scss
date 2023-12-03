@@ -1,16 +1,16 @@
 @use "global" as *;
 
-.voice-status{
+// .voice-status{
 
-    @include mq("md") {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-}
+//     @include mq("md") {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: flex-end;
+//     }
+// }
 
-.voice-status__demographic{
-    display: block;
-    font-size: rem(12);
-}
+// .voice-status__demographic{
+//     display: block;
+//     font-size: rem(12);
+// }
 
