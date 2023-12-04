@@ -31,11 +31,11 @@
 }
 
 .policy-terms__body-numlist{
-    padding-left: 1.3em;
+    padding-left: 1.4em;
     list-style: auto;
 
     li{
-        text-indent: 0.2em;
+        // padding-left: rem(1);
     }
 
     .policy-terms__body-dotlist{
@@ -49,16 +49,16 @@
 }
 
 .policy-terms__body-dotlist{
-    padding-left: 1.5em;
+    // padding-left: 1.5em;
     margin-top: rem(32);
 
     li{
-        text-indent: -1.2em;
+        // text-indent: -1.2em;
     }
 
-    li::before{
-        content: "・";
-    }
+    // li::before{
+    //     content: "・";
+    // }
 }
 
 .policy-terms__body-text--first{
