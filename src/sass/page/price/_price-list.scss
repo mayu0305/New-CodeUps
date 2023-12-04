@@ -2,7 +2,7 @@
 
 .price-list__item{
     display: flex;
-    min-height: rem(60);
+    min-height: rem(58);
 
     &:not(:first-of-type){
         border-top: rem(1) solid $green;
@@ -10,23 +10,30 @@
 }
 
 .price-list__item-term{
-    flex-basis: 70%;
+    flex-basis: 69%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: rem(8);
+    padding: rem(6);
 
     @include mq("md") {
         flex-direction: row;
+        flex-basis: 67.5%;
+        justify-content: flex-start;
+        padding: rem(6) rem(15);
     }
 }
 
 .price-list__item-desc{
-    flex-basis: 30%;
+    flex-basis: 31%;
     border-left: rem(1) solid $green;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: rem(16);
+
+    @include mq("md") {
+        flex-basis: 32.5%;
+    }
 }
