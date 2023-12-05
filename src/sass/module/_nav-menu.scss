@@ -50,7 +50,7 @@
     }
 }
 
-.nav-menu__half:first-of-type .nav-menu__quarter:last-of-type{
+.nav-menu__quarter--sitemap{
     @include mq("md") {
         padding-left: rem(40) !important; /*上記スタイルに負けてしまうため*/
     }
