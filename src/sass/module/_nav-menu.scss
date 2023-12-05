@@ -20,6 +20,16 @@
     }
 }
 
+.nav-menu__half--sitemap{
+    &:last-of-type{
+        padding-left: rem(22);
+
+        @include mq("md") {
+            padding-left: rem(48);
+        }
+    }
+}
+
 .nav-menu__quarter{
 
     &:last-of-type{
@@ -27,6 +37,7 @@
 
         @include mq("md") {
             margin-top: 0;
+            // padding-left: rem(40) !important;
         }
     }
 
@@ -38,6 +49,19 @@
         }
     }
 }
+
+.nav-menu__half:first-of-type .nav-menu__quarter:last-of-type{
+    @include mq("md") {
+        padding-left: rem(40) !important; /*上記スタイルに負けてしまうため*/
+    }
+}
+
+.nav-menu__half--sitemap .nav-menu__quarter:last-of-type{
+    @include mq("md") {
+        padding-left: rem(64) !important; /*上記スタイルに負けてしまうため*/
+    }
+}
+
 
 .nav-menu__item{
     line-height: 1.125;
