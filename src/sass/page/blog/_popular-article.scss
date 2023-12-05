@@ -31,6 +31,7 @@
 }
 
 .popular-article__item-date{
+    display: block;
     font-family: $second-font-family;
     font-size: rem(12);
 }
@@ -38,7 +39,7 @@
 .popular-article__item-title{
     font-size: rem(16);
     font-weight: $medium;
-    margin-top: rem(4);
+    margin-top: rem(2);
 }
 
 .popular-article__item-img{

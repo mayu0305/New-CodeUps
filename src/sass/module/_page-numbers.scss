@@ -12,13 +12,10 @@
     width: rem(38);
     height: rem(38);
     line-height: 0;
-    margin-left: rem(5);
-    margin-right: rem(5);
     transition: 0.3s;
 
     &.prev{
-        margin-right: rem(34);
-        margin-left: 0;
+        margin-right: rem(28);
         position: relative;
 
         &::before{
@@ -41,8 +38,7 @@
     }
 
     &.next{
-        margin-left: rem(34);
-        margin-right: 0;
+        margin-left: rem(28);
         position: relative;
 
         &::before{
@@ -82,4 +78,12 @@
     @include mq("md") {
         display: flex;
     }
+}
+
+.page-numbers--blog-post.prev{
+    margin-right: 0;
+}
+
+.page-numbers--blog-post.next{
+    margin-left: rem(70);
 }

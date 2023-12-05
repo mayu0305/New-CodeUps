@@ -18,13 +18,14 @@
         position: absolute;
         top: calc(100% + rem(28));
         left: rem(15);
-        z-index: -1;
+        z-index: 0;
 
         @include mq("md") {
             width: rem(301);
             height: rem(138);
             top: calc(100% + rem(80));
             left: calc(50% - min(48.5vw, 38.8rem));
+            z-index: -1;
         }
     }
 }

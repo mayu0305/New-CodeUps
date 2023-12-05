@@ -1,5 +1,11 @@
 @use "global" as *;
 
+.post__content{
+    @include mq("md") {
+        margin-top: rem(-4);
+    }
+}
+
 .post__content-body{
 
     & > *{
@@ -46,7 +52,7 @@
     font-size: rem(24);
     font-weight: $bold;
     line-height: 1.56;
-    padding-bottom: rem(4);
+    padding-bottom: rem(1);
     margin-top: rem(8);
 
     @include mq("md") {

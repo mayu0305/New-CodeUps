@@ -11,15 +11,35 @@
 }
 
 .aside-archive__items{
-    margin-top: rem(24);
+    margin-top: rem(17);
 }
 
 .aside-archive__item{
     color: $green;
     font-size: rem(24);
+
+    summary{
+        margin-left: rem(2);
+    }
+
+    summary::marker{
+        font-size: rem(30);
+    }
 }
 
 .aside-archive__item-lists{
-    padding-left: 1em;
+    padding-left: rem(30);
     list-style: inside disclosure-closed;
+
+    & > *+*{
+        margin-top: rem(9);
+    }
+}
+
+.aside-archive__item-list{
+    line-height: 1;
+
+    &::marker{
+        font-size: rem(30);
+    }
 }
