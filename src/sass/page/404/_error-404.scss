@@ -17,13 +17,13 @@
     margin-top: 0;
 
     padding-top: rem(52);
-    padding-bottom: rem(40);
+    // padding-bottom: rem(40);
 
     @include mq("md") {
         background-size: rem(698) rem(698);
         background-position: top rem(-25) left;
 
-        padding-top: rem(120);
+        padding-top: rem(118);
         padding-bottom: rem(150);
     }
 }
@@ -46,9 +46,18 @@
 .error-404__text{
     color: $white;
     text-align: center;
+    margin-top: rem(-6);
+
+    @include mq("md") {
+        margin-top: rem(23);
+    }
 }
 
 .error-404____link{
     margin-top: rem(40);
     text-align: center;
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
 }

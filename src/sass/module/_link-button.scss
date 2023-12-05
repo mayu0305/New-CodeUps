@@ -99,6 +99,10 @@
     }
 }
 
+.link-button__arrow--404{
+    margin-left: rem(12);
+}
+
 .link-button:hover .link-button__arrow::before{
     background-color: $green;
 }
