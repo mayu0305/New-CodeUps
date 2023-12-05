@@ -32,7 +32,10 @@
 .breadcrumb__inner--sitemap{
 
     &::before{
-        content: none;
+
+        @include mq("md") {
+            content: none;
+        }
     }
 }
 
