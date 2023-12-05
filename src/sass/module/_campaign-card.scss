@@ -24,6 +24,14 @@
     }
 }
 
+.campaign-card__content--blog{
+    padding: rem(16) rem(23) rem(24);
+
+    @include mq("md") {
+        padding: rem(16) rem(23) rem(24);
+    }
+}
+
 .campaign-card__content-title{
     font-size: rem(16);
     font-weight: $medium;
@@ -36,6 +44,16 @@
     @include mq("md") {
         font-size: rem(24);
         padding-bottom: rem(2);
+    }
+}
+
+.campaign-card__content-title--blog{
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: rem(6);
+
+    @include mq("md") {
+        padding-bottom: rem(7);
     }
 }
 
@@ -60,6 +78,12 @@
         font-size: rem(16);
         line-height: 1.5;
         margin-top: rem(23);
+    }
+}
+
+.campaign-card__content-desc--blog{
+    @include mq("md") {
+        margin-top: rem(8);
     }
 }
 
@@ -88,6 +112,18 @@
     }
 }
 
+.campaign-card__img--blog{
+
+    img{
+        aspect-ratio: 294/188;
+
+        @include mq("md") {
+            aspect-ratio: 294/188;
+        }
+    }
+
+}
+
 .campaign-card__description{
     margin-top: rem(24);
 }
@@ -114,4 +150,60 @@
 
 .campaign-card__info-link{
     margin-top: rem(16);
+}
+
+.campaign-card__content-price-regular{
+    display: inline-block;
+    font-size: rem(20);
+    padding-bottom: rem(4);
+    position: relative;
+
+    &::before{
+        content: "";
+        display: block;
+        background-color: $red;
+        height: rem(3);
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    @include mq("md") {
+        font-size: rem(24);
+        padding-bottom: rem(2);
+    }
+}
+
+.campaign-card__content-price-regular--blog{
+    @include mq("md") {
+        font-size: rem(20);
+    }
+}
+
+.campaign-card__content-price-sale{
+    display: inline-block;
+    color: $green;
+    font-size: rem(32);
+    padding-left: rem(18);
+
+    @include mq("md") {
+        font-size: rem(40);
+        padding-left: rem(27);
+    }
+}
+
+.campaign-card__content-price-sale--page{
+    @include mq("md") {
+        padding-left: rem(40);
+    }
+}
+
+.campaign-card__content-price-sale--blog{
+    @include mq("md") {
+        font-size: rem(32);
+        padding-left: rem(16);
+    }
 }

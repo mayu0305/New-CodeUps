@@ -8,9 +8,9 @@
     box-shadow: rem(2) rem(2) rem(10) 0px rgba(0, 0, 0, 0.25);
     transition: 0.3s;
 
-    &:hover{
-        transform: translateY(rem(10));
-        transition: 0.3s;
+    &:hover img{
+        transform: scale(1.2);
+        transition: 0.5s;
     }
 }
 
@@ -44,9 +44,11 @@
 }
 
 .blog-card__img{
+    overflow: hidden;
 
     img{
         aspect-ratio: 300/200;
         object-fit: cover;
+        transition: 0.5s;
     }
 }

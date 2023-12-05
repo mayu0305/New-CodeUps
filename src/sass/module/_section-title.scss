@@ -32,6 +32,10 @@
 .section-title--contact{
     padding-bottom: 0;
 
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+
     span{
         font-size: rem(80);
         line-height: 1;
@@ -72,6 +76,6 @@
     margin-top: 0;
 
     @include mq("md") {
-        margin-top: rem(8);
+        margin-top: 0;
     }
 }
