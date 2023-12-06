@@ -11,6 +11,28 @@
 
 .aboutAs-intro--page{
     padding-top: 0;
+    position: relative;
+
+    &::before {
+        display: none;
+
+        @include mq("md") {
+            background-image: url(../images/common/icon-fish--left.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: "";
+            display: block;
+            height: 3.125rem;
+            position: absolute;
+            // right: 0.9375rem;
+            // top: -1.6875rem;
+            // width: 6.8125rem;
+            width: rem(301);
+            height: rem(138);
+            top: calc(100% + rem(40));
+            right: calc(50% - min(48.5vw, 40rem));
+        }
+    }
 }
 
 
