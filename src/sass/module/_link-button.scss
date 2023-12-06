@@ -70,6 +70,14 @@
     }
 }
 
+.link-button__text--send{
+    color: $white;
+    text-transform: capitalize;
+    text-align: left;
+    width: 100%;
+    padding-left: rem(54);
+}
+
 .link-button__arrow{
     display: inline-block;
     margin-left: rem(6);
@@ -103,10 +111,21 @@
     margin-left: rem(12);
 }
 
+.link-button__arrow--send{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(55);
+}
+
 .link-button:hover .link-button__arrow::before{
     background-color: $green;
 }
 
 .link-button:hover .link-button__arrow--white::before{
     background-color: $white;
+}
+
+.link-button:hover .link-button__text--send{
+    color: $green;
 }

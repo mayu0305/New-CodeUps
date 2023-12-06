@@ -40,3 +40,28 @@ body {
   font-family: $base-font-family;
   color: $font-color;
 }
+
+////////////////////
+// コンタクトフォーム
+////////////////////
+
+/*デフォルト色の指定*/
+$border-cr-default: #408F95; //デフォルト時のボーダーの色
+$border-cr: #391E88; //inputのhover or focus時の色
+$back-cr: #fff;//input（テキスト系）の背景色
+
+/*サイズ等の指定*/
+$fz: 16px;//入力するときのfont-size
+$padding-und: 8px;//paddingの指定（上下） inputの内側の余白で使う
+$padding-lnr: 16px;//paddingの指定（左右） inputの内側の余白で使う
+
+/*チェックボックスの指定*/
+$check-fz: 16px;//フォントサイズ
+$check-size: 14px;//外枠の幅高さ
+$check-bg-cr: #fff;//外枠の背景色
+$check-border-cr: #408F95;//外枠の色
+$check-bg-cr-inner: #C94800;//チェックマークの背景色
+$check-space: 8px;//チェックマークと文字の距離
+$check-space-betweenRadio: rem(100);//ラジオボタンの間の距離
+$check-weight: 2px;//チェックマークの線の太さ(px)
+
