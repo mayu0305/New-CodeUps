@@ -214,8 +214,12 @@
                         <meta itemprop="position" content="1">
                     </li>
                     <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                        <span itemprop="name">お問い合わせ</span>
-                        <meta itemprop="position" content="2">
+                      <a href="./" title="お問い合わせ" itemprop="item"><span itemprop="name">お問い合わせ</span></a>
+                      <meta itemprop="position" content="2">
+                    </li>
+                    <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <span itemprop="name">お問い合わせエラー</span>
+                        <meta itemprop="position" content="3">
                     </li>
                 </ul>
             </div>
@@ -227,8 +231,14 @@
             <div class="contact__inner">
                 <div class="contact__form">
                     <form action="" method="post" class="wpcf7-form init" aria-label="コンタクトフォーム" novalidate="novalidate" data-status="init">
-                        <dl class="contact__form-items">
-                            <div class="contact__form-item">
+                        <ul class="contact__form-error-items">
+                          <li class="contact__form-error-item">
+                            必須項目が入力されていません。
+                            <span class="text-block">入力してください。</span>
+                          </li>
+                        </ul>
+                      <dl class="contact__form-items contact__form-items--error">
+                            <div class="contact__form-item contact__form-item--error">
                                 <dt class="contact__form-item-term">
                                     お名前
                                     <span>必須</span>
