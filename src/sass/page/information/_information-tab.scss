@@ -3,6 +3,7 @@
 .information-tab__items {
     display: flex;
     gap: rem(19.5);
+    position: relative;
 
     @include mq("md") {
         gap: 0;
