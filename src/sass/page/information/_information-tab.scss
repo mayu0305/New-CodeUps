@@ -5,7 +5,8 @@
     gap: rem(19.5);
 
     @include mq("md") {
-        gap: rem(90);
+        gap: 0;
+        justify-content: space-between;
     }
 }
 
@@ -19,11 +20,16 @@
     max-width: rem(102);
     height: rem(60);
 
+    &:focus-visible{
+        opacity: 0.5;
+    }
+
     @include mq("md") {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-basis: calc((100% - rem(180)) / 3);
+        flex-basis: rem(300);
         font-size: rem(24);
         max-width: rem(300);
         height: rem(90);
@@ -53,7 +59,7 @@
 
         span{
             display: inline-block;
-            margin-left: rem(8);
+            // margin-left: rem(8);
         }
     }
 }
