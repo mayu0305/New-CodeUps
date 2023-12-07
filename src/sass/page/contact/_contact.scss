@@ -149,8 +149,7 @@ textarea {
 		display: inline-block;
 		position: relative;
 		padding: 0 0 0 calc($check-size + $check-space);
-		margin: 0 $check-space-betweenRadio 0 0;
-		font-size: $check-fz;
+		// margin: 0 $check-space-betweenRadio 0 0;
 		line-height: 1;
 		cursor: pointer;
 		transition: 0.3s ease;
@@ -236,20 +235,13 @@ textarea {
 	/*↓カスタム */
     font-size: rem(12);
     max-width: rem(480);
-    // margin-top: rem(10);
-	// font-size: $fz;
 	padding: rem(9) rem(6);
 	background-color: $back-cr;
     border: 1px solid $border-cr-default;
-    // border-radius: $border-r;
-	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
-	// appearance: auto;
-	/*↓デフォルトではないアイコンを使う場合は入力する*/
 	background-image: url(../images/contact/select-arrow.svg);
 	background-position: right 12px center;
 	background-repeat: no-repeat;
 	&:focus {
-		// border: 1px solid $border-cr;
         background-color: $light-green;
 	}
 

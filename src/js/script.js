@@ -128,9 +128,9 @@ const secondSwiper = new Swiper(".js-campaign-swiper", {
     }
 });
 
-window.addEventListener('load', () => {
-    matchHeight('.campaign-card');
-});
+// window.addEventListener('load', () => {
+//     matchHeight('.campaign-card');
+// });
 
 
 //スクロールアニメーション要素の取得とスピードの設定
@@ -270,8 +270,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //ギャラリーモーダル
-MicroModal.init({
-    awaitCloseAnimation: true,
-    awaitOpenAnimation: true,
-    disableScroll: true
-});
+
+if (typeof MicroModal !== 'undefined') {
+    // MicroModalが定義されている場合の処理
+    MicroModal.init({
+        awaitCloseAnimation: true,
+        awaitOpenAnimation: true,
+        disableScroll: true
+    });
+
+}

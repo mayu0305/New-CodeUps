@@ -2,4 +2,12 @@
 
 .page-voice__items{
     margin-top: rem(40);
+
+    & > *+*{
+        margin-top: rem(40);
+
+        @include mq("md") {
+            margin-top: 0;
+        }
+    }
 }
