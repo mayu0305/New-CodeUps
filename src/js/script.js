@@ -128,10 +128,6 @@ const secondSwiper = new Swiper(".js-campaign-swiper", {
     }
 });
 
-// window.addEventListener('load', () => {
-//     matchHeight('.campaign-card');
-// });
-
 
 //スクロールアニメーション要素の取得とスピードの設定
 var box = $('.js-scroll'),
@@ -280,3 +276,42 @@ if (typeof MicroModal !== 'undefined') {
     });
 
 }
+
+
+//ブログアーカイブsammary開閉アニメーション
+const ANIMATION_TIME = 250;
+const OFFSET_TIME = 5;
+
+document.addEventListener('DOMContentLoaded', function () {
+
+	const accordions = document.querySelectorAll('.js-details');
+	accordions.forEach((accordion) => {
+    const title = accordion.querySelector('.js-summary');
+		title.addEventListener('click', (e) => {
+			e.preventDefault();
+			if (!accordion.open) {
+				accordion.open = true;
+				setTimeout(() => {
+					accordion.classList.add('is-opened');
+				}, OFFSET_TIME);
+				//
+			} else if (accordion.open) {
+				accordion.classList.remove('is-opened');
+				setTimeout(() => {
+					accordion.open = false;
+				}, ANIMATION_TIME + OFFSET_TIME);
+			}
+		});
+
+
+		accordion.addEventListener('toggle', () => {
+			const hasOpenedClass = accordion.classList.contains('is-opened');
+
+			if (accordion.open && !hasOpenedClass) {
+				accordion.classList.add('is-opened');
+			} else if (!accordion.open && hasOpenedClass) {
+				accordion.classList.remove('is-opened');
+			}
+		});
+	});
+});

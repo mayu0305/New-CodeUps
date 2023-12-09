@@ -20,16 +20,28 @@
 
     summary{
         margin-left: rem(2);
+        cursor: pointer;
     }
 
     summary::marker{
         font-size: rem(30);
     }
+
+    &:not(.is-opened) > .aside-archive__item-lists{
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
 }
 
 .aside-archive__item-lists{
     padding-left: rem(30);
     list-style: inside disclosure-closed;
+    transition: padding .25s, height .25s, opacity .25s;
+
+    height: auto;
+    opacity: 1;
 
     & > *+*{
         margin-top: rem(9);

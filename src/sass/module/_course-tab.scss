@@ -30,24 +30,8 @@
 
 .course-tab__panel {
     display: none;
-    // margin-left: rem(32);
-    // margin-right: rem(32);
-
-    // @include mq("md") {
-    //     margin-left: 0;
-    //     margin-right: 0;
-    // }
+    margin-top: rem(40);
 }
-
-// .course-tab__panel--campaign{
-//     margin-left: rem(32);
-//     margin-right: rem(32);
-
-//     @include mq("md") {
-//         margin-left: 0;
-//         margin-right: 0;
-//     }
-// }
 
 .course-tab__panel.-active {
     display: block;
