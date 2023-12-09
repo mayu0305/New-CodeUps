@@ -28,3 +28,15 @@
     }
   }
 }
+
+.inner--narrow{
+  @include mq("md") {
+    max-width: rem(750);
+  }
+}
+
+.inner--policy-terms{
+  @include mq("md") {
+    max-width: rem(850);
+  }
+}
