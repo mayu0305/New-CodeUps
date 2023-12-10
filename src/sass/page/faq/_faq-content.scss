@@ -12,4 +12,11 @@
     }
 }
 
+.faq-content__items{
+
+    & > *+*{
+        margin-top: rem(40);
+    }
+}
+
 

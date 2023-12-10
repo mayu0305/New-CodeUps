@@ -1,26 +1,15 @@
 @use "global" as *;
 
-// .price-content__inner{
+.price-content__item{
+    margin-top: rem(-100);
+    padding-top: rem(100);
 
-//     @include mq("md") {
-//         max-width: rem(700);
-//         margin-left: auto;
-//         margin-right: auto;
-//     }
-// }
-
-.price-content__items{
-
-    & > *+* {
-        margin-top: rem(40);
-
-        @include mq("md") {
-            margin-top: rem(80);
-        }
+    &:not(:first-of-type){
+        padding-top: rem(140);
     }
 }
 
-.price-content__item{
+.price-content__item-box{
     border: rem(1) solid $green;
 
     @include mq("md") {
